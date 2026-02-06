@@ -234,19 +234,20 @@ a:hover {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 1;
-  background: linear-gradient(135deg, #1a3a7a 0%, #0a2463 100%);
+
   border-radius: clamp(12px, 3vw, 20px);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 clamp(10px, 3vw, 20px) clamp(30px, 5vw, 60px)
-    rgba(10, 36, 99, 0.2);
+
   overflow: hidden;
 }
 
-.hero-placeholder svg {
+.hero-placeholder img {
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ============================================
