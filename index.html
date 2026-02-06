@@ -87,8 +87,8 @@
         </button>
       </div>
       <div class="hero-image" aria-hidden="true">
-        <div class="hero-placeholder">
-          <img class="logo-montevi" src="Images/Logo_montevi-removebg-preview.png" alt="Logo da Monteví Engenharia" />
+        <div class="logo-container">
+          <img class="logo-img" src="Images/Logo_montevi-removebg-preview.png" alt="Logo da Monteví Engenharia" />
             <!-- Background -->
             <!-- <rect width="400" height="500" fill="#0a2463" /> -->
 
@@ -508,6 +508,128 @@
         </div>
       </div>
     </section>
+
+<!-- CÓDIGO HTML ALTERADO - NOVA SEÇÃO DE SERVIÇOS POR SEGMENTO -->
+<!-- Inserir após a seção </section> do About e antes de  Services Section --> 
+
+<!-- Services by Segment Section -->
+<section id="services-segment" class="services-segment" role="region" aria-label="Serviços por Segmento">
+    <div class="services-segment-container">
+        <div class="services-segment-image" aria-hidden="true">
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background -->
+                <defs>
+                    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#d0e0e8;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect width="400" height="500" fill="url(#bgGradient)" rx="20"/>
+                
+                <!-- Blueprint lines -->
+                <line x1="50" y1="80" x2="350" y2="80" stroke="#247ba0" stroke-width="2" opacity="0.3"/>
+                <line x1="50" y1="150" x2="350" y2="150" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="50" y1="220" x2="350" y2="220" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="50" y1="290" x2="350" y2="290" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="50" y1="360" x2="350" y2="360" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="50" y1="430" x2="350" y2="430" stroke="#247ba0" stroke-width="2" opacity="0.3"/>
+                
+                <!-- Vertical lines -->
+                <line x1="80" y1="50" x2="80" y2="450" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="150" y1="50" x2="150" y2="450" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="220" y1="50" x2="220" y2="450" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="290" y1="50" x2="290" y2="450" stroke="#247ba0" stroke-width="1" opacity="0.2"/>
+                <line x1="320" y1="50" x2="320" y2="450" stroke="#247ba0" stroke-width="2" opacity="0.3"/>
+                
+                <!-- Pen/Pencil illustration -->
+                <g>
+                    <!-- Pen body -->
+                    <rect x="120" y="150" width="160" height="25" fill="#247ba0" rx="12"/>
+                    <!-- Pen tip -->
+                    <polygon points="280,150 300,162.5 280,175" fill="#0a2463"/>
+                    <!-- Highlight -->
+                    <rect x="125" y="155" width="150" height="5" fill="#b2dbbf" opacity="0.6" rx="2"/>
+                </g>
+                
+                <!-- Hand illustration -->
+                <g>
+                    <!-- Arm -->
+                    <rect x="60" y="280" width="80" height="40" fill="#c9a876" rx="20"/>
+                    <!-- Hand -->
+                    <circle cx="160" cy="300" r="35" fill="#d4b896"/>
+                    <!-- Fingers -->
+                    <ellipse cx="145" cy="260" rx="12" ry="25" fill="#d4b896" transform="rotate(-30 145 260)"/>
+                    <ellipse cx="175" cy="255" rx="12" ry="25" fill="#d4b896" transform="rotate(30 175 255)"/>
+                    <ellipse cx="195" cy="280" rx="12" ry="20" fill="#d4b896" transform="rotate(60 195 280)"/>
+                    <!-- Thumb -->
+                    <ellipse cx="130" cy="310" rx="12" ry="18" fill="#d4b896" transform="rotate(-45 130 310)"/>
+                </g>
+                
+                <!-- Blueprint elements -->
+                <circle cx="100" cy="380" r="8" fill="none" stroke="#247ba0" stroke-width="2" opacity="0.4"/>
+                <circle cx="300" cy="420" r="6" fill="none" stroke="#247ba0" stroke-width="2" opacity="0.4"/>
+                <rect x="200" y="380" width="60" height="40" fill="none" stroke="#247ba0" stroke-width="2" opacity="0.4"/>
+            </svg>
+        </div>
+        
+        <div class="services-segment-content">
+            <h2 class="services-segment-title">Nossos Serviços</h2>
+            
+            <div class="services-segment-list">
+                <!-- Engenharia Civil -->
+                <div class="service-segment-item">
+                    <div class="service-segment-header">
+                        <h3 class="service-segment-name">Engenharia Civil</h3>
+                        <span class="service-segment-badge civil">CIVIL</span>
+                    </div>
+                    <p class="service-segment-description">
+                        Obras, projetos estruturais e soluções construtivas com segurança e eficiência.
+                    </p>
+                    <ul class="service-segment-items">
+                        <li>Projetos Estruturais</li>
+                        <li>Obras Civis</li>
+                        <li>Soluções Construtivas</li>
+                        <li>Fiscalização de Obras</li>
+                    </ul>
+                </div>
+                
+                <!-- Engenharia Elétrica -->
+                <div class="service-segment-item">
+                    <div class="service-segment-header">
+                        <h3 class="service-segment-name">Engenharia Elétrica</h3>
+                        <span class="service-segment-badge electrical">ELÉTRICA</span>
+                    </div>
+                    <p class="service-segment-description">
+                        Projetos elétricos completos, com foco em confiabilidade, automação e eficiência energética.
+                    </p>
+                    <ul class="service-segment-items">
+                        <li>Projetos Elétricos Completos</li>
+                        <li>Automação e Controle</li>
+                        <li>Eficiência Energética</li>
+                        <li>Sistemas de Proteção</li>
+                    </ul>
+                </div>
+                
+                <!-- Projetos Complementares -->
+                <div class="service-segment-item">
+                    <div class="service-segment-header">
+                        <h3 class="service-segment-name">Projetos Complementares</h3>
+                        <span class="service-segment-badge complementary">COMPLEMENTAR</span>
+                    </div>
+                    <p class="service-segment-description">
+                        Integração de sistemas hidráulicos, sanitários, incêndio e climatização para resultados otimizados.
+                    </p>
+                    <ul class="service-segment-items">
+                        <li>Sistemas Hidráulicos</li>
+                        <li>Sistemas Sanitários</li>
+                        <li>Proteção Contra Incêndio</li>
+                        <li>Climatização</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Portfolio Section -->
     <section

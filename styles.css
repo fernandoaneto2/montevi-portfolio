@@ -250,6 +250,45 @@ a:hover {
   justify-content: center;
 }
 
+/* Container para garantir o enquadramento */
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 40px;
+
+  border-radius: 12px; /* Bordas levemente arredondadas */
+  width: fit-content; /* Ajusta ao tamanho da imagem */
+  margin: 20px auto; /* Centraliza o bloco na página */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: transform 0.8s ease;
+}
+.logo-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.8s ease;
+}
+/* Ajustes na Imagem do Logo */
+.logo-img {
+  max-width: 300px; /* Controle o tamanho aqui */
+  height: auto;
+  display: block;
+
+  /* Melhoria de cores via CSS */
+  filter: brightness(1.1) contrast(1.05)
+    drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+
+  /* Suaviza as bordas da imagem */
+  image-rendering: auto;
+
+  transition: transform 0.8s ease;
+}
+
+/* Efeito ao passar o mouse (opcional) */
+.logo-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.8s ease;
+}
+
 /* ============================================
    CTA BUTTON - RESPONSIVA
    ============================================ */
@@ -1094,5 +1133,212 @@ a:hover {
 
   .navbar {
     padding: clamp(0.5rem, 1vw, 0.75rem) 0;
+  }
+}
+
+/* CÓDIGO CSS ALTERADO - NOVA SEÇÃO DE SERVIÇOS POR SEGMENTO */
+/* Inserir antes de /* SERVICES SECTION - RESPONSIVA */
+*/
+
+/* ============================================
+   SERVICES BY SEGMENT SECTION - RESPONSIVA
+   ============================================ */
+
+.services-segment {
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+  background: linear-gradient(135deg, #f5f9fc 0%, #ffffff 100%);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-segment-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.services-segment-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-segment-image svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(
+    0 clamp(8px, 2vw, 15px) clamp(20px, 4vw, 40px) rgba(10, 36, 99, 0.1)
+  );
+}
+
+.services-segment-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.services-segment-title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: var(--primary-dark);
+  margin: 0 0 clamp(1rem, 1.5vw, 1.5rem) 0;
+  position: relative;
+  padding-bottom: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.services-segment-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: clamp(40px, 10vw, 60px);
+  height: 3px;
+  background-color: var(--primary-light);
+}
+
+.services-segment-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 2vw, 2rem);
+}
+
+.service-segment-item {
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-left: 4px solid var(--primary-light);
+  background-color: var(--white);
+  border-radius: clamp(8px, 2vw, 12px);
+  transition: var(--transition);
+}
+
+.service-segment-item:hover {
+  box-shadow: 0 clamp(8px, 2vw, 15px) clamp(20px, 4vw, 40px)
+    rgba(36, 123, 160, 0.15);
+  transform: translateX(clamp(3px, 1vw, 5px));
+}
+
+.service-segment-header {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 1.5vw, 1rem);
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+  flex-wrap: wrap;
+}
+
+.service-segment-name {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--primary-dark);
+  margin: 0;
+  font-weight: 700;
+}
+
+.service-segment-badge {
+  display: inline-block;
+  padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1rem);
+  border-radius: 20px;
+  font-size: clamp(0.65rem, 1vw, 0.75rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.service-segment-badge.civil {
+  background-color: rgba(36, 123, 160, 0.15);
+  color: var(--primary-light);
+  border: 1px solid var(--primary-light);
+}
+
+.service-segment-badge.electrical {
+  background-color: rgba(178, 219, 191, 0.2);
+  color: #1a7a5a;
+  border: 1px solid #1a7a5a;
+}
+
+.service-segment-badge.complementary {
+  background-color: rgba(10, 36, 99, 0.1);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+
+.service-segment-description {
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  color: var(--text-light);
+  margin: 0 0 clamp(0.75rem, 1.2vw, 1rem) 0;
+  line-height: 1.6;
+}
+
+.service-segment-items {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(150px, 45vw, 200px), 1fr)
+  );
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+  margin: 0;
+  padding: 0;
+}
+
+.service-segment-items li {
+  padding-left: clamp(1rem, 1.5vw, 1.25rem);
+  position: relative;
+  color: var(--text-dark);
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  font-weight: 500;
+}
+
+.service-segment-items li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--primary-light);
+  font-weight: bold;
+}
+
+/* ============================================
+   RESPONSIVIDADE - TABLET
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .services-segment-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-segment-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-segment {
+    padding: clamp(3rem, 6vw, 4rem) clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .service-segment-item {
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+  .service-segment-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-segment {
+    padding: clamp(3rem, 6vw, 4rem) clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .services-segment-image svg {
+    max-width: 100%;
+  }
+
+  .service-segment-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .service-segment-badge {
+    align-self: flex-start;
   }
 }
