@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta
+      name="description"
+      content="Monteví Engenharia - Soluções em Engenharia Civil, Elétrica e Complementar"
+    />
+    <meta name="theme-color" content="#0a2463" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>Monteví Engenharia - Construção | Solução | Sonhos</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a2463' width='100' height='100'/><path d='M30 20 L50 50 L30 80 M50 20 L70 50 L50 80' fill='none' stroke='%23b2dbbf' stroke-width='6'/></svg>"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navegação Principal">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <svg
+            class="logo-icon"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M30 20 L50 50 L30 80 M50 20 L70 50 L50 80"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="logo-text">MONTEVÍ</span>
+        </div>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link">Início</a></li>
+          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#services" class="nav-link">Serviços</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+          <li><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="region" aria-label="Seção Principal">
+      <div class="hero-content">
+        <p class="hero-location">JOÃO PESSOA - PB</p>
+        <h1 class="hero-title">
+          A Excelência da <span class="highlight">Engenharia</span>
+        </h1>
+        <p class="hero-description">
+          Soluções de engenharia civil, elétrica e complementares com excelência
+          técnica e inovação em cada projeto.
+        </p>
+        <button
+          class="cta-button"
+          onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})"
+          aria-label="Explorar serviços"
+        >
+          EXPLORAR SERVIÇOS
+        </button>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <div class="hero-placeholder">
+          <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background -->
+            <rect width="400" height="500" fill="#0a2463" />
+
+            <!-- Logo: V Shape with M -->
+            <!-- Left V -->
+            <path
+              d="M 60 80 L 140 200 L 100 200"
+              fill="#ffffff"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M 100 200 L 60 280 L 80 280"
+              fill="#ffffff"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+
+            <!-- Right V -->
+            <path
+              d="M 300 80 L 220 200 L 260 200"
+              fill="#ffffff"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M 260 200 L 300 280 L 280 280"
+              fill="#ffffff"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+
+            <!-- Center M -->
+            <rect
+              x="140"
+              y="80"
+              width="20"
+              height="200"
+              fill="#ffffff"
+              rx="2"
+            />
+            <path
+              d="M 160 80 L 200 140 L 240 80"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="20"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <rect
+              x="240"
+              y="80"
+              width="20"
+              height="200"
+              fill="#ffffff"
+              rx="2"
+            />
+
+            <!-- Text: MONTEVÍ -->
+            <text
+              x="200"
+              y="340"
+              font-size="48"
+              font-weight="bold"
+              fill="#ffffff"
+              text-anchor="middle"
+              font-family="Arial, sans-serif"
+              letter-spacing="2"
+            >
+              MONTEVÍ
+            </text>
+
+            <!-- Text: ENGENHARIA -->
+            <text
+              x="200"
+              y="390"
+              font-size="20"
+              fill="#b2dbbf"
+              text-anchor="middle"
+              font-family="Arial, sans-serif"
+              letter-spacing="3"
+            >
+              ENGENHARIA
+            </text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="about"
+      role="region"
+      aria-label="Sobre a Empresa"
+    >
+      <div class="about-content">
+        <h2 class="section-title">Somos a Monteví</h2>
+        <p class="about-text">
+          Bem-vindo à Monteví Engenharia, sua parceira confiável em soluções de
+          Engenharia Civil, Elétrica e Complementar.
+        </p>
+        <p class="about-text">
+          Nossa equipe altamente qualificada está comprometida em oferecer
+          excelência técnica e inovação em cada projeto. Utilizamos métodos e
+          práticas atualizadas para garantir resultados excepcionais dentro do
+          prazo e do orçamento. Conte conosco para o sucesso do seu projeto.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <h3>+200</h3>
+            <p>Projetos Elétricos</p>
+          </div>
+          <div class="stat">
+            <h3>+25 MW</h3>
+            <p>Projetos de Conexão</p>
+          </div>
+          <div class="stat">
+            <h3>+10 Anos</h3>
+            <p>Experiência</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image" aria-hidden="true">
+        <div class="about-placeholder">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#f5f5f5" />
+            <rect
+              x="50"
+              y="50"
+              width="300"
+              height="200"
+              fill="none"
+              stroke="#247ba0"
+              stroke-width="2"
+            />
+            <circle cx="100" cy="100" r="8" fill="#247ba0" />
+            <circle cx="300" cy="100" r="8" fill="#247ba0" />
+            <circle cx="100" cy="250" r="8" fill="#247ba0" />
+            <circle cx="300" cy="250" r="8" fill="#247ba0" />
+            <line
+              x1="100"
+              y1="100"
+              x2="300"
+              y2="100"
+              stroke="#247ba0"
+              stroke-width="1"
+            />
+            <line
+              x1="100"
+              y1="250"
+              x2="300"
+              y2="250"
+              stroke="#247ba0"
+              stroke-width="1"
+            />
+            <line
+              x1="100"
+              y1="100"
+              x2="100"
+              y2="250"
+              stroke="#247ba0"
+              stroke-width="1"
+            />
+            <line
+              x1="300"
+              y1="100"
+              x2="300"
+              y2="250"
+              stroke="#247ba0"
+              stroke-width="1"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services" role="region" aria-label="Serviços">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">
+        Três nichos de especialização para suas necessidades
+      </p>
+
+      <div class="services-container">
+        <!-- Service 1: Civil -->
+        <div
+          class="service-card"
+          data-service="civil"
+          role="button"
+          tabindex="0"
+          aria-label="Engenharia Civil"
+        >
+          <div class="service-image" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#2c2c2c" />
+              <rect
+                x="50"
+                y="100"
+                width="300"
+                height="150"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="3"
+              />
+              <line
+                x1="50"
+                y1="150"
+                x2="350"
+                y2="150"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="150"
+                y1="100"
+                x2="150"
+                y2="250"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="250"
+                y1="100"
+                x2="250"
+                y2="250"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <text
+                x="200"
+                y="180"
+                font-size="20"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+                font-weight="bold"
+              >
+                CIVIL
+              </text>
+            </svg>
+          </div>
+          <div class="service-info">
+            <p class="service-category">ESPECIALIDADE</p>
+            <h3 class="service-title">Engenharia Civil</h3>
+          </div>
+        </div>
+
+        <!-- Service 2: Electrical -->
+        <div
+          class="service-card"
+          data-service="electrical"
+          role="button"
+          tabindex="0"
+          aria-label="Engenharia Elétrica"
+        >
+          <div class="service-image" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#2c2c2c" />
+              <path
+                d="M200 50 L220 120 L280 120 L230 170 L250 240 L200 190 L150 240 L170 170 L120 120 L180 120 Z"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="3"
+                stroke-linejoin="round"
+              />
+              <text
+                x="200"
+                y="280"
+                font-size="16"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                ELÉTRICA
+              </text>
+            </svg>
+          </div>
+          <div class="service-info">
+            <p class="service-category">ESPECIALIDADE</p>
+            <h3 class="service-title">Engenharia Elétrica</h3>
+          </div>
+        </div>
+
+        <!-- Service 3: Complementary -->
+        <div
+          class="service-card"
+          data-service="complementary"
+          role="button"
+          tabindex="0"
+          aria-label="Projetos Complementares"
+        >
+          <div class="service-image" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#2c2c2c" />
+              <circle
+                cx="200"
+                cy="150"
+                r="80"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <circle
+                cx="160"
+                cy="130"
+                r="20"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <circle
+                cx="240"
+                cy="130"
+                r="20"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <circle
+                cx="200"
+                cy="180"
+                r="20"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <line
+                x1="200"
+                y1="70"
+                x2="200"
+                y2="230"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="120"
+                y1="150"
+                x2="280"
+                y2="150"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <text
+                x="200"
+                y="280"
+                font-size="14"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                COMPLEMENTARES
+              </text>
+            </svg>
+          </div>
+          <div class="service-info">
+            <p class="service-category">ESPECIALIDADE</p>
+            <h3 class="service-title">Projetos Complementares</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Details -->
+      <div class="service-details">
+        <div class="service-detail-item active" id="civil-detail">
+          <h3>Engenharia Civil</h3>
+          <p>
+            Obras, projetos estruturais e soluções construtivas com segurança e
+            eficiência. Nossa equipe realiza desde pequenas reformas até grandes
+            projetos estruturais, sempre com foco em qualidade e segurança.
+          </p>
+          <ul class="service-list">
+            <li>Projetos Estruturais</li>
+            <li>Obras Civis</li>
+            <li>Soluções Construtivas</li>
+            <li>Fiscalização de Obras</li>
+          </ul>
+        </div>
+
+        <div class="service-detail-item" id="electrical-detail">
+          <h3>Engenharia Elétrica</h3>
+          <p>
+            Projetos elétricos completos, com foco em confiabilidade, automação
+            e eficiência energética. Contamos com mais de 200 projetos elétricos
+            realizados e +25 MW em projetos de conexão.
+          </p>
+          <ul class="service-list">
+            <li>Projetos Elétricos Completos</li>
+            <li>Automação e Controle</li>
+            <li>Eficiência Energética</li>
+            <li>Sistemas de Proteção</li>
+          </ul>
+        </div>
+
+        <div class="service-detail-item" id="complementary-detail">
+          <h3>Projetos Complementares</h3>
+          <p>
+            Integração de sistemas hidráulicos, sanitários, incêndio e
+            climatização para resultados otimizados. Garantimos a
+            compatibilidade e eficiência de todos os sistemas integrados.
+          </p>
+          <ul class="service-list">
+            <li>Sistemas Hidráulicos</li>
+            <li>Sistemas Sanitários</li>
+            <li>Proteção Contra Incêndio</li>
+            <li>Climatização</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section
+      id="portfolio"
+      class="portfolio"
+      role="region"
+      aria-label="Portfólio"
+    >
+      <h2 class="section-title">Portfólio de Projetos</h2>
+      <p class="section-subtitle">
+        Conheça alguns de nossos trabalhos realizados
+      </p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-image" aria-hidden="true">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1a1a1a" />
+              <rect
+                x="30"
+                y="30"
+                width="240"
+                height="140"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <text
+                x="150"
+                y="110"
+                font-size="18"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                PCI
+              </text>
+            </svg>
+          </div>
+          <h3>Projeto PCI</h3>
+          <p>Prevenção de Combate a Incêndio - Sapé, PB</p>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" aria-hidden="true">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1a1a1a" />
+              <circle
+                cx="150"
+                cy="100"
+                r="70"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <line
+                x1="150"
+                y1="30"
+                x2="150"
+                y2="170"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="80"
+                y1="100"
+                x2="220"
+                y2="100"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <text
+                x="150"
+                y="110"
+                font-size="16"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                SPDA
+              </text>
+            </svg>
+          </div>
+          <h3>Projeto SPDA</h3>
+          <p>Sistema de Proteção e Descargas - Sapé, PB</p>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" aria-hidden="true">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1a1a1a" />
+              <rect
+                x="40"
+                y="40"
+                width="220"
+                height="120"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <rect
+                x="60"
+                y="60"
+                width="50"
+                height="80"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="1"
+              />
+              <rect
+                x="130"
+                y="60"
+                width="50"
+                height="80"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="1"
+              />
+              <rect
+                x="200"
+                y="60"
+                width="50"
+                height="80"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="1"
+              />
+              <text
+                x="150"
+                y="175"
+                font-size="14"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                PREDIAL
+              </text>
+            </svg>
+          </div>
+          <h3>Projeto Predial</h3>
+          <p>Residencial Multifamiliar - João Pessoa, PB</p>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" aria-hidden="true">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1a1a1a" />
+              <path
+                d="M150 30 L200 80 L200 170 L100 170 L100 80 Z"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="125"
+                y1="80"
+                x2="175"
+                y2="80"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="125"
+                y1="110"
+                x2="175"
+                y2="110"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="125"
+                y1="140"
+                x2="175"
+                y2="140"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <text
+                x="150"
+                y="185"
+                font-size="14"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                ELÉTRICO
+              </text>
+            </svg>
+          </div>
+          <h3>Projeto Elétrico</h3>
+          <p>Cabeamento Estruturado - João Pessoa, PB</p>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" aria-hidden="true">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1a1a1a" />
+              <circle
+                cx="150"
+                cy="100"
+                r="60"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+              />
+              <path
+                d="M150 40 Q180 70 180 100 Q180 130 150 160 Q120 130 120 100 Q120 70 150 40"
+                fill="#b2dbbf"
+                opacity="0.3"
+              />
+              <text
+                x="150"
+                y="110"
+                font-size="16"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                POINSP
+              </text>
+            </svg>
+          </div>
+          <h3>Projeto POINSP</h3>
+          <p>Policlínica Integrada - João Pessoa, PB</p>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" aria-hidden="true">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1a1a1a" />
+              <path
+                d="M80 100 L150 50 L220 100 L220 150 L80 150 Z"
+                fill="none"
+                stroke="#b2dbbf"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="150"
+                y1="50"
+                x2="150"
+                y2="150"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="80"
+                y1="100"
+                x2="220"
+                y2="100"
+                stroke="#b2dbbf"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <text
+                x="150"
+                y="175"
+                font-size="14"
+                fill="#b2dbbf"
+                text-anchor="middle"
+                font-family="Arial"
+              >
+                DER
+              </text>
+            </svg>
+          </div>
+          <h3>Projeto DER</h3>
+          <p>Departamento de Estradas - João Pessoa, PB</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team" role="region" aria-label="Corpo Técnico">
+      <h2 class="section-title">Corpo Técnico</h2>
+      <p class="section-subtitle">Profissionais qualificados e experientes</p>
+
+      <div class="team-container">
+        <div class="team-member">
+          <div class="member-avatar" aria-hidden="true">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="100" fill="#f5f5f5" />
+              <circle cx="100" cy="70" r="30" fill="#247ba0" />
+              <path
+                d="M50 140 Q50 120 100 120 Q150 120 150 140 L150 160 Q150 180 100 180 Q50 180 50 160 Z"
+                fill="#247ba0"
+              />
+            </svg>
+          </div>
+          <h3>Virna Layane Montenegro</h3>
+          <p class="member-role">Engenheira Civil</p>
+          <p class="member-crea">CREA: 161715346-9 PB</p>
+          <p class="member-description">
+            5 anos de experiência em gestão de contratos, fiscalização de obras
+            públicas e elaboração de projetos de engenharia.
+          </p>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar" aria-hidden="true">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="100" fill="#f5f5f5" />
+              <circle cx="100" cy="70" r="30" fill="#247ba0" />
+              <path
+                d="M50 140 Q50 120 100 120 Q150 120 150 140 L150 160 Q150 180 100 180 Q50 180 50 160 Z"
+                fill="#247ba0"
+              />
+            </svg>
+          </div>
+          <h3>Vitanael Alves de Aquino</h3>
+          <p class="member-role">Engenheiro Eletricista</p>
+          <p class="member-crea">CREA: 162020730-3 PB</p>
+          <p class="member-description">
+            +10 anos no setor de infraestrutura, +200 projetos elétricos e +25
+            MW em projetos de conexão.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" role="region" aria-label="Contato">
+      <h2 class="section-title">Entre em Contato</h2>
+      <p class="section-subtitle">
+        Estamos prontos para levar excelência ao seu próximo projeto
+      </p>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Telefone</h3>
+            <p><a href="tel:+558399817249">(83) 99817-7249</a></p>
+            <p><a href="tel:+558399886334">(83) 99886-3348</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h3>E-mail</h3>
+            <p>
+              <a href="mailto:metta.engenharias@gmail.com"
+                >metta.engenharias@gmail.com</a
+              >
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Redes Sociais</h3>
+            <p>
+              <a
+                href="https://instagram.com/montevieng"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@montevieng</a
+              >
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Localização</h3>
+            <p>João Pessoa - PB</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Seu Nome"
+              required
+              aria-label="Nome"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              placeholder="Seu E-mail"
+              required
+              aria-label="E-mail"
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              placeholder="Sua Mensagem"
+              rows="5"
+              required
+              aria-label="Mensagem"
+            ></textarea>
+          </div>
+          <button type="submit" class="cta-button" aria-label="Enviar mensagem">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-content">
+        <p>&copy; 2026 Monteví Engenharia. Todos os direitos reservados.</p>
+        <p>Construção | Solução | Sonhos</p>
+      </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <a
+      href="https://wa.me/558399817249"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-button"
+      title="Contato via WhatsApp"
+      aria-label="Enviar mensagem via WhatsApp"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="white"
+        aria-hidden="true"
+      >
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.66 0 1.04.415 2.049 1.144 2.818l.002.002c.75.751 1.772 1.162 2.846 1.162h.005c1.074 0 2.096-.41 2.847-1.161l-.002-.002c.73-.769 1.144-1.778 1.144-2.818 0-1.062-.408-2.06-1.148-2.833-.751-.722-1.776-1.119-2.849-1.119zm5.14-10.665C6.465 2.314 2.461 6.318 2.461 11.142c0 1.798.469 3.551 1.357 5.076L2.212 21.5l5.577-1.546c1.528.823 3.231 1.257 4.972 1.257 4.923 0 8.927-4.004 8.927-8.927 0-2.383-.931-4.626-2.62-6.315-1.688-1.688-3.932-2.619-6.315-2.619z"
+        />
+      </svg>
+    </a>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

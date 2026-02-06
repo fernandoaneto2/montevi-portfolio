@@ -1,0 +1,1097 @@
+/* ============================================
+   MONTEVÍ ENGENHARIA - STYLESHEET
+   Paleta: Azul Escuro, Azul Claro
+   Responsividade Máxima para Todas as Telas
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Paleta Azul */
+  --primary-dark: #0a2463;
+  --primary-medium: #1a3a7a;
+  --primary-light: #247ba0;
+  --accent-light: #b2dbbf;
+  --accent-lighter: #e8f4f8;
+  --text-dark: #0a2463;
+  --text-light: #5a7a8a;
+  --border-light: #d0e0e8;
+  --white: #ffffff;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TYPOGRAPHY - RESPONSIVA
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.highlight {
+  color: var(--primary-light);
+  font-weight: 700;
+}
+
+/* ============================================
+   NAVIGATION - RESPONSIVA
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(10, 36, 99, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: clamp(0.75rem, 2vw, 1rem) 0;
+  border-bottom: 1px solid rgba(36, 123, 160, 0.2);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  font-weight: 700;
+  color: var(--white);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  letter-spacing: 2px;
+}
+
+.logo-icon {
+  width: clamp(28px, 5vw, 32px);
+  height: clamp(28px, 5vw, 32px);
+  color: var(--accent-light);
+}
+
+.logo-text {
+  color: var(--white);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: clamp(1.5rem, 3vw, 2rem);
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--white);
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-light);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: clamp(20px, 4vw, 25px);
+  height: 3px;
+  background-color: var(--white);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+/* ============================================
+   HERO SECTION - RESPONSIVA
+   ============================================ */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  min-height: 100vh;
+  padding: clamp(5rem, 10vw, 6rem) clamp(1rem, 3vw, 2rem) clamp(3rem, 5vw, 4rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffffff 0%, #e8f4f8 100%);
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero-location {
+  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  color: var(--primary-light);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  text-transform: uppercase;
+}
+
+.hero-title {
+  line-height: 1.1;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  color: var(--primary-dark);
+}
+
+.hero-description {
+  margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-placeholder {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #1a3a7a 0%, #0a2463 100%);
+  border-radius: clamp(12px, 3vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 clamp(10px, 3vw, 20px) clamp(30px, 5vw, 60px)
+    rgba(10, 36, 99, 0.2);
+  overflow: hidden;
+}
+
+.hero-placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   CTA BUTTON - RESPONSIVA
+   ============================================ */
+
+.cta-button {
+  display: inline-block;
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2.5rem);
+  background-color: var(--primary-dark);
+  color: var(--white);
+  border: 2px solid var(--primary-dark);
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-light);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.cta-button:hover::before {
+  left: 0;
+}
+
+.cta-button:hover {
+  color: var(--white);
+}
+
+/* ============================================
+   ABOUT SECTION - RESPONSIVA
+   ============================================ */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: var(--primary-dark);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  position: relative;
+  padding-bottom: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: clamp(40px, 10vw, 60px);
+  height: 3px;
+  background-color: var(--primary-light);
+}
+
+.about-text {
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  color: var(--text-light);
+  margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.8;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(150px, 30vw, 200px), 1fr)
+  );
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-top: clamp(2rem, 3vw, 3rem);
+}
+
+.stat {
+  text-align: center;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.stat:hover {
+  border-color: var(--primary-light);
+  background-color: rgba(36, 123, 160, 0.05);
+}
+
+.stat h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--primary-light);
+  margin-bottom: clamp(0.25rem, 0.5vw, 0.5rem);
+}
+
+.stat p {
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  color: var(--text-light);
+  margin: 0;
+}
+
+.about-image {
+  order: 1;
+}
+
+.about-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d0e0e8 100%);
+  border-radius: clamp(12px, 3vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 clamp(10px, 3vw, 20px) clamp(30px, 5vw, 60px)
+    rgba(10, 36, 99, 0.1);
+  overflow: hidden;
+}
+
+.about-placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   SERVICES SECTION - RESPONSIVA
+   ============================================ */
+
+.services {
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+  background: linear-gradient(135deg, #f5f9fc 0%, #ffffff 100%);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--text-light);
+  margin-bottom: clamp(2rem, 3vw, 3rem);
+  text-align: center;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(280px, 100%, 350px), 1fr)
+  );
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.service-card {
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: clamp(8px, 2vw, 12px);
+  overflow: hidden;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+}
+
+.service-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 clamp(8px, 2vw, 15px) clamp(20px, 4vw, 40px)
+    rgba(36, 123, 160, 0.15);
+  transform: translateY(clamp(-3px, -1vw, -5px));
+}
+
+.service-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #1a3a7a 0%, #0a2463 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.service-image svg {
+  width: 100%;
+  height: 100%;
+}
+
+.service-info {
+  padding: clamp(1.5rem, 2vw, 2rem);
+}
+
+.service-category {
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  color: var(--primary-light);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: clamp(0.25rem, 0.5vw, 0.5rem);
+}
+
+.service-title {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.service-details {
+  background-color: var(--accent-lighter);
+  border-radius: clamp(8px, 2vw, 12px);
+  padding: clamp(2rem, 3vw, 3rem);
+  margin-top: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.service-detail-item {
+  display: none;
+}
+
+.service-detail-item.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-detail-item h3 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  color: var(--primary-dark);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.service-detail-item p {
+  color: var(--text-light);
+  margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.8;
+}
+
+.service-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(150px, 45vw, 200px), 1fr)
+  );
+  gap: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.service-list li {
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+  position: relative;
+  color: var(--text-dark);
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+}
+
+.service-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-light);
+  font-weight: bold;
+}
+
+/* ============================================
+   PORTFOLIO SECTION - RESPONSIVA
+   ============================================ */
+
+.portfolio {
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(250px, 100%, 300px), 1fr)
+  );
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.portfolio-item {
+  border-radius: clamp(8px, 2vw, 12px);
+  overflow: hidden;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 clamp(8px, 2vw, 15px) clamp(20px, 4vw, 40px)
+    rgba(36, 123, 160, 0.15);
+  transform: translateY(clamp(-3px, -1vw, -5px));
+}
+
+.portfolio-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, #1a3a7a 0%, #0a2463 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.portfolio-image svg {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-item h3 {
+  padding: clamp(1rem, 1.5vw, 1.5rem) clamp(1rem, 1.5vw, 1.5rem)
+    clamp(0.25rem, 0.5vw, 0.5rem);
+  color: var(--primary-dark);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.portfolio-item p {
+  padding: 0 clamp(1rem, 1.5vw, 1.5rem) clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.85rem, 1.2vw, 0.9rem);
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* ============================================
+   TEAM SECTION - RESPONSIVA
+   ============================================ */
+
+.team {
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+  background: linear-gradient(135deg, #f5f9fc 0%, #ffffff 100%);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(280px, 100%, 350px), 1fr)
+  );
+  gap: clamp(2rem, 3vw, 3rem);
+  margin-top: clamp(2rem, 3vw, 3rem);
+}
+
+.team-member {
+  text-align: center;
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-radius: clamp(8px, 2vw, 12px);
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.team-member:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 clamp(8px, 2vw, 15px) clamp(20px, 4vw, 40px)
+    rgba(36, 123, 160, 0.15);
+  transform: translateY(clamp(-3px, -1vw, -5px));
+}
+
+.member-avatar {
+  width: clamp(100px, 20vw, 120px);
+  height: clamp(100px, 20vw, 120px);
+  margin: 0 auto clamp(1rem, 1.5vw, 1.5rem);
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d0e0e8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--primary-light);
+}
+
+.member-avatar svg {
+  width: 100%;
+  height: 100%;
+}
+
+.team-member h3 {
+  color: var(--primary-dark);
+  margin-bottom: clamp(0.25rem, 0.5vw, 0.5rem);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+
+.member-role {
+  font-size: clamp(0.85rem, 1.3vw, 0.95rem);
+  color: var(--primary-light);
+  font-weight: 600;
+  margin-bottom: clamp(0.2rem, 0.3vw, 0.25rem);
+}
+
+.member-crea {
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  color: var(--text-light);
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.member-description {
+  font-size: clamp(0.85rem, 1.2vw, 0.9rem);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ============================================
+   CONTACT SECTION - RESPONSIVA
+   ============================================ */
+
+.contact {
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+  background: linear-gradient(135deg, #0a2463 0%, #1a3a7a 100%);
+  color: var(--white);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contact .section-title {
+  color: var(--white);
+}
+
+.contact .section-title::after {
+  background-color: var(--accent-light);
+}
+
+.contact .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(280px, 100%, 400px), 1fr)
+  );
+  gap: clamp(2rem, 3vw, 4rem);
+  margin-top: clamp(2rem, 3vw, 3rem);
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(150px, 100%, 200px), 1fr)
+  );
+  gap: clamp(1.5rem, 2vw, 2rem);
+}
+
+.contact-item h3 {
+  color: var(--accent-light);
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.contact-item p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: clamp(0.3rem, 0.5vw, 0.5rem);
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+}
+
+.contact-item a {
+  color: var(--accent-light);
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: var(--white);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: clamp(0.75rem, 1.2vw, 1rem);
+  border: 1px solid rgba(178, 219, 191, 0.3);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  transition: var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-light);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form .cta-button {
+  background-color: var(--accent-light);
+  color: var(--primary-dark);
+  border-color: var(--accent-light);
+  align-self: flex-start;
+  font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+}
+
+.contact-form .cta-button:hover {
+  background-color: var(--white);
+  color: var(--primary-dark);
+}
+
+/* ============================================
+   FOOTER - RESPONSIVA
+   ============================================ */
+
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  text-align: center;
+  border-top: 1px solid rgba(178, 219, 191, 0.2);
+}
+
+.footer-content p {
+  color: var(--white);
+  margin: clamp(0.3rem, 0.5vw, 0.5rem) 0;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+}
+
+.footer-content p:last-child {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+/* ============================================
+   WHATSAPP BUTTON - RESPONSIVA
+   ============================================ */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
+  width: clamp(50px, 10vw, 60px);
+  height: clamp(50px, 10vw, 60px);
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+  z-index: 999;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  animation: none;
+}
+
+.whatsapp-button svg {
+  width: clamp(24px, 5vw, 32px);
+  height: clamp(24px, 5vw, 32px);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    order: 1;
+  }
+
+  .about-image {
+    order: 2;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(250px, 100%, 300px), 1fr)
+    );
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(10, 36, 99, 0.98);
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .nav-menu.active {
+    max-height: 500px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    padding: clamp(0.75rem, 1.5vw, 1rem) 0;
+    border-bottom: 1px solid rgba(178, 219, 191, 0.1);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(200px, 100%, 250px), 1fr)
+    );
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .hero {
+    padding: clamp(4rem, 8vw, 5rem) clamp(0.75rem, 2vw, 1rem)
+      clamp(2rem, 3vw, 3rem);
+    gap: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  .about {
+    padding: clamp(3rem, 6vw, 4rem) clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .services {
+    padding: clamp(3rem, 6vw, 4rem) clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .portfolio {
+    padding: clamp(3rem, 6vw, 4rem) clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .team {
+    padding: clamp(3rem, 6vw, 4rem) clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .contact {
+    padding: clamp(3rem, 6vw, 4rem) clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .service-details {
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-form .cta-button {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-logo {
+    gap: clamp(0.3rem, 1vw, 0.5rem);
+  }
+
+  .logo-text {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    line-height: 1;
+  }
+
+  .section-title {
+    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  }
+
+  .service-card,
+  .portfolio-item,
+  .team-member {
+    border-radius: clamp(6px, 1.5vw, 8px);
+  }
+
+  .whatsapp-button {
+    width: clamp(45px, 8vw, 50px);
+    height: clamp(45px, 8vw, 50px);
+    bottom: clamp(0.75rem, 2vw, 1rem);
+    right: clamp(0.75rem, 2vw, 1rem);
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .navbar,
+  .whatsapp-button,
+  .contact-form {
+    display: none;
+  }
+
+  body {
+    background-color: var(--white);
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (OPCIONAL)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-lighter: #1a3a7a;
+  }
+
+  .service-details {
+    background-color: var(--accent-lighter);
+  }
+}
+
+/* ============================================
+   ACESSIBILIDADE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   ORIENTAÇÃO LANDSCAPE
+   ============================================ */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: clamp(3rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+  }
+
+  .navbar {
+    padding: clamp(0.5rem, 1vw, 0.75rem) 0;
+  }
+}
