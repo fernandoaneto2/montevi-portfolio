@@ -546,17 +546,5 @@ document.addEventListener("DOMContentLoaded", function () {
         serviceName = "Projetos Complementares";
         break;
     }
-
-    if (card.classList.contains("is-flipped")) {
-      card.setAttribute(
-        "aria-label",
-        `${serviceName} - Detalhes do serviço. Clique para voltar.`
-      );
-    } else {
-      card.setAttribute(
-        "aria-label",
-        `${serviceName} - Clique para ver detalhes`
-      );
-    }
   }
 });
