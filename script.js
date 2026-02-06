@@ -504,3 +504,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// SERVICOS COMO CARTOES
+
+// Solução alternativa que modifica o HTML existente
+// Função para os cartões interativos
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os cartões
+  const flipCards = document.querySelectorAll(".service-card-flip");
+
+  // Adiciona evento de clique para cada cartão
+  flipCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      this.classList.toggle("is-flipped");
+      updateAriaLabel(this);
+    });
+
+    // Adiciona evento para teclado (Enter ou Espaço)
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.classList.toggle("is-flipped");
+        updateAriaLabel(this);
+      }
+    });
+  });
+
+  // Função para atualizar o texto de acessibilidade
+  function updateAriaLabel(card) {
+    const service = card.getAttribute("data-service");
+    let serviceName = "";
+
+    switch (service) {
+      case "civil":
+        serviceName = "Engenharia Civil";
+        break;
+      case "electrical":
+        serviceName = "Engenharia Elétrica";
+        break;
+      case "complementary":
+        serviceName = "Projetos Complementares";
+        break;
+    }
+
+    if (card.classList.contains("is-flipped")) {
+      card.setAttribute(
+        "aria-label",
+        `${serviceName} - Detalhes do serviço. Clique para voltar.`
+      );
+    } else {
+      card.setAttribute(
+        "aria-label",
+        `${serviceName} - Clique para ver detalhes`
+      );
+    }
+  }
+});
