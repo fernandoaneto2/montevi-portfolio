@@ -231,50 +231,50 @@ function showNotification(message, type = "info") {
   }
 
   // Add styles
-  notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        padding: 1rem 1.5rem;
-        background-color: ${bgColor};
-        color: white;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 2000;
-        animation: slideIn 0.3s ease-out;
-        font-weight: 500;
-        max-width: 90vw;
-        font-size: clamp(0.85rem, 1.2vw, 1rem);
-    `;
+  //   notification.style.cssText = `
+  //         position: fixed;
+  //         top: 100px;
+  //         right: 20px;
+  //         padding: 1rem 1.5rem;
+  //         background-color: ${bgColor};
+  //         color: white;
+  //         border-radius: 4px;
+  //         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  //         z-index: 2000;
+  //         animation: slideIn 0.3s ease-out;
+  //         font-weight: 500;
+  //         max-width: 90vw;
+  //         font-size: clamp(0.85rem, 1.2vw, 1rem);
+  //     `;
 
   // Add animation if not already present
-  if (!document.querySelector("style[data-notification]")) {
-    const style = document.createElement("style");
-    style.setAttribute("data-notification", "true");
-    style.textContent = `
-            @keyframes slideIn {
-                from {
-                    transform: translateX(400px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-            @keyframes slideOut {
-                from {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-                to {
-                    transform: translateX(400px);
-                    opacity: 0;
-                }
-            }
-        `;
-    document.head.appendChild(style);
-  }
+  //   if (!document.querySelector("style[data-notification]")) {
+  //     const style = document.createElement("style");
+  //     style.setAttribute("data-notification", "true");
+  //     style.textContent = `
+  //             @keyframes slideIn {
+  //                 from {
+  //                     transform: translateX(400px);
+  //                     opacity: 0;
+  //                 }
+  //                 to {
+  //                     transform: translateX(0);
+  //                     opacity: 1;
+  //                 }
+  //             }
+  //             @keyframes slideOut {
+  //                 from {
+  //                     transform: translateX(0);
+  //                     opacity: 1;
+  //                 }
+  //                 to {
+  //                     transform: translateX(400px);
+  //                     opacity: 0;
+  //                 }
+  //             }
+  //         `;
+  //     document.head.appendChild(style);
+  //   }
 
   // Add to page
   document.body.appendChild(notification);
@@ -548,3 +548,150 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// Script do por que escolher a montevi - PILARES
+
+// ============================================
+// PILARES - INTERATIVIDADE
+// ============================================
+
+const pilarCards = document.querySelectorAll(".pilar-card");
+
+// ============================================
+// CARD HOVER EFFECTS
+// ============================================
+
+pilarCards.forEach((card) => {
+  card.addEventListener("mouseenter", function () {
+    this.style.transform = `translateY(${-8}px)`;
+  });
+
+  card.addEventListener("mouseleave", function () {
+    this.style.transform = "translateY(0)";
+  });
+});
+
+// ============================================
+// INTERSECTION OBSERVER FOR ANIMATIONS
+// ============================================
+
+const cardObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.animation = "slideIn 0.6s ease-out forwards";
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+pilarCards.forEach((card, index) => {
+  card.style.opacity = "0";
+  card.style.animationDelay = `${index * 0.1}s`;
+  cardObserver.observe(card);
+});
+
+// ============================================
+// KEYBOARD NAVIGATION
+// ============================================
+
+pilarCards.forEach((card) => {
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("role", "article");
+
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      card.click();
+    }
+  });
+});
+
+// ============================================
+// ICON ANIMATION ON HOVER
+// ============================================
+
+pilarCards.forEach((card) => {
+  const icon = card.querySelector(".pilar-icon");
+
+  card.addEventListener("mouseenter", () => {
+    if (icon) {
+      icon.style.transform = "scale(1.1) rotate(5deg)";
+      icon.style.transition = "all 0.3s ease-out";
+    }
+  });
+
+  card.addEventListener("mouseleave", () => {
+    if (icon) {
+      icon.style.transform = "scale(1) rotate(0deg)";
+    }
+  });
+});
+
+// ============================================
+// FEATURE LIST ANIMATION
+// ============================================
+
+const featureLists = document.querySelectorAll(".pilar-features");
+
+featureLists.forEach((list) => {
+  const items = list.querySelectorAll("li");
+  items.forEach((item, index) => {
+    item.style.opacity = "0";
+    item.style.transform = "translateX(-10px)";
+    item.style.transition = `all 0.3s ease-out ${index * 0.05}s`;
+  });
+});
+
+const featureObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const items = entry.target.querySelectorAll("li");
+        items.forEach((item) => {
+          item.style.opacity = "1";
+          item.style.transform = "translateX(0)";
+        });
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+featureLists.forEach((list) => {
+  featureObserver.observe(list);
+});
+
+// ============================================
+// RESPONSIVE ADJUSTMENTS
+// ============================================
+
+function handleResponsive() {
+  const isMobile = window.innerWidth < 768;
+
+  pilarCards.forEach((card) => {
+    if (isMobile) {
+      card.style.cursor = "pointer";
+    }
+  });
+}
+
+window.addEventListener("resize", handleResponsive);
+handleResponsive();
+
+// ============================================
+// CLICK HANDLER FOR CARDS
+// ============================================
+
+pilarCards.forEach((card) => {
+  card.addEventListener("click", function () {
+    // Remove active class from all cards
+    pilarCards.forEach((c) => c.classList.remove("active"));
+    // Add active class to clicked card
+    this.classList.add("active");
+  });
+});
+
+console.log("✓ Seção de Pilares carregada com sucesso");
