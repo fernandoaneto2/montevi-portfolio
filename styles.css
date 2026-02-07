@@ -169,6 +169,11 @@ a:hover {
 
 .menu-toggle {
   display: none;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -195,7 +200,7 @@ a:hover {
   align-items: center;
   min-height: 100vh;
   padding: clamp(5rem, 10vw, 6rem) clamp(1rem, 3vw, 2rem) clamp(3rem, 5vw, 4rem);
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
   background: linear-gradient(135deg, #ffffff 0%, #e8f4f8 100%);
 }
@@ -256,38 +261,62 @@ a:hover {
   display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  padding: 40px;
+  width: 100%; /* Ajusta ao tamanho da imagem */
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 3rem) 0;
+}
 
-  border-radius: 12px; /* Bordas levemente arredondadas */
-  width: fit-content; /* Ajusta ao tamanho da imagem */
-  margin: 20px auto; /* Centraliza o bloco na página */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  transition: transform 0.8s ease;
-}
-.logo-container:hover {
-  transform: scale(1.05);
-  transition: transform 0.8s ease;
-}
 /* Ajustes na Imagem do Logo */
 .logo-img {
-  max-width: 300px; /* Controle o tamanho aqui */
+  /* Tamanhos responsivos */
+  width: 100%;
+  max-width: clamp(280px, 40vw, 500px);
   height: auto;
-  display: block;
 
-  /* Melhoria de cores via CSS */
+  /* Estilos visuais */
+  border-radius: clamp(8px, 1.5vw, 12px);
   filter: brightness(1.1) contrast(1.05)
     drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
 
-  /* Suaviza as bordas da imagem */
-  image-rendering: auto;
-
-  transition: transform 0.8s ease;
+  /* Performance */
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Efeito ao passar o mouse (opcional) */
-.logo-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.8s ease;
+/* Responsividade */
+@media (max-width: 1024px) {
+  .logo-img {
+    max-width: min(60vw, 400px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    max-width: min(80vw, 350px);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    max-width: min(90vw, 300px);
+    border-radius: 10px;
+  }
+}
+
+/* Modo paisagem em mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .logo-img {
+    max-width: min(50vw, 300px);
+    max-height: 70vh;
+  }
+}
+
+/* Hover apenas para desktop */
+@media (hover: hover) {
+  .logo-img:hover {
+    transform: scale(1.02);
+  }
 }
 
 /* ============================================
@@ -300,13 +329,14 @@ a:hover {
   background-color: var(--primary-dark);
   color: var(--white);
   border: 2px solid var(--primary-dark);
+  max-width: max-content;
   font-weight: 600;
   font-size: clamp(0.85rem, 1.5vw, 0.95rem);
   letter-spacing: 1px;
   cursor: pointer;
   transition: var(--transition);
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -331,6 +361,22 @@ a:hover {
   color: var(--white);
 }
 
+@media (max-width: 480px) {
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+}
+/* @media (max-width: 480px) {
+  .hero {
+    height: 100vh;
+    width: 100vw;
+  }
+} */
+
 /* ============================================
    ABOUT SECTION - RESPONSIVA
    ============================================ */
@@ -354,7 +400,7 @@ a:hover {
   padding-bottom: clamp(0.75rem, 1.5vw, 1rem);
 }
 
-.section-title::after {
+/* .section-title::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -362,7 +408,7 @@ a:hover {
   width: clamp(40px, 10vw, 60px);
   height: 3px;
   background-color: var(--primary-light);
-}
+} */
 
 .about-text {
   font-size: clamp(0.95rem, 1.5vw, 1rem);
@@ -423,9 +469,30 @@ a:hover {
   overflow: hidden;
 }
 
-.about-placeholder svg {
-  width: 100%;
-  height: 100%;
+@media (max-width: 1018px) {
+  .about-image {
+    display: none;
+  }
+}
+
+/* Ou esconde em telas muito pequenas */
+@media (max-width: 580px) {
+  .logo-img {
+    display: none;
+  }
+}
+
+@media (max-width: 624px) {
+  .about-placeholder img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .about-placeholder img {
+    max-width: 100%;
+    height: 100%;
+  }
 }
 
 /* ============================================
@@ -433,9 +500,9 @@ a:hover {
    ============================================ */
 
 .services {
-  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
-  background: linear-gradient(135deg, #f5f9fc 0%, #ffffff 100%);
-  max-width: 1400px;
+  /* padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem); */
+  background: #ffffff;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1092,20 +1159,6 @@ a:hover {
 
   section {
     page-break-inside: avoid;
-  }
-}
-
-/* ============================================
-   DARK MODE SUPPORT (OPCIONAL)
-   ============================================ */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent-lighter: #1a3a7a;
-  }
-
-  .service-details {
-    background-color: var(--accent-lighter);
   }
 }
 
@@ -1979,7 +2032,7 @@ body {
   align-self: center;
 }
 
-.section-title::after {
+/* .section-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -1994,7 +2047,7 @@ body {
     transparent
   );
   border-radius: 2px;
-}
+} */
 
 .section-subtitle {
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
