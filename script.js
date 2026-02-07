@@ -1,12 +1,3 @@
-// ============================================
-// MONTEVÍ ENGENHARIA - JAVASCRIPT
-// Otimizado para Responsividade Máxima
-// ============================================
-
-// ============================================
-// MOBILE MENU TOGGLE
-// ============================================
-
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -613,22 +604,22 @@ pilarCards.forEach((card) => {
 // ICON ANIMATION ON HOVER
 // ============================================
 
-pilarCards.forEach((card) => {
-  const icon = card.querySelector(".pilar-icon");
+// pilarCards.forEach((card) => {
+//   const icon = card.querySelector(".pilar-icon");
 
-  card.addEventListener("mouseenter", () => {
-    if (icon) {
-      icon.style.transform = "scale(1.1) rotate(5deg)";
-      icon.style.transition = "all 0.3s ease-out";
-    }
-  });
+//   card.addEventListener("mouseenter", () => {
+//     if (icon) {
+//       icon.style.transform = "scale(1.1) rotate(5deg)";
+//       icon.style.transition = "all 0.3s ease-out";
+//     }
+//   });
 
-  card.addEventListener("mouseleave", () => {
-    if (icon) {
-      icon.style.transform = "scale(1) rotate(0deg)";
-    }
-  });
-});
+//   card.addEventListener("mouseleave", () => {
+//     if (icon) {
+//       icon.style.transform = "scale(1) rotate(0deg)";
+//     }
+//   });
+// });
 
 // ============================================
 // FEATURE LIST ANIMATION

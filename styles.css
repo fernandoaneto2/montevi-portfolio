@@ -513,6 +513,12 @@ a:hover {
   text-align: center;
 }
 
+.services p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto clamp(2rem, 3vw, 3rem);
+}
+
 .services-container {
   display: grid;
   grid-template-columns: repeat(
@@ -555,7 +561,9 @@ a:hover {
 }
 
 .service-info {
-  padding-bottom: 109px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .service-category {
@@ -634,6 +642,14 @@ a:hover {
   left: 0;
   color: var(--primary-light);
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .services p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto clamp(2rem, 3vw, 3rem);
+  }
 }
 
 /* ============================================
