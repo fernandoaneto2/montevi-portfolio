@@ -803,6 +803,7 @@ a:hover {
   background: linear-gradient(135deg, #0a2463 0%, #1a3a7a 100%);
   color: var(--white);
   max-width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -2120,5 +2121,100 @@ body {
 
   .pilar-number {
     font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+/* Container da Seção */
+.montevi-clientes {
+  padding: 80px 0;
+  background-color: #fff;
+  overflow: hidden; /* Impede a rolagem horizontal da página */
+  width: 100%;
+}
+
+/* Título Centralizado */
+.montevi-titulo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.montevi-titulo h2 {
+  font-family: "Montserrat", sans-serif; /* Ou a fonte do seu projeto */
+  font-size: 1.1rem;
+  color: #555;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.montevi-titulo h2 strong {
+  font-weight: 800;
+  color: #0a2563;
+}
+
+/* Área de visualização do Carrossel */
+.clientes-scroll-container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* A "Fita" que se move */
+.clientes-scroll {
+  display: flex;
+  flex-wrap: nowrap; /* Força todas as logos na mesma linha */
+  width: max-content; /* Permite que a div cresça além de 100% da tela */
+  animation: slide-left 40s linear infinite; /* Controle a velocidade aqui */
+}
+
+/* Cada Item de Logo */
+.cliente-item {
+  flex: 0 0 auto; /* Impede as logos de encolherem */
+  width: 250px; /* Largura de cada "célula" do carrossel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.cliente-logo img {
+  max-width: 180px; /* Ajuste conforme o tamanho real das imagens */
+  height: auto;
+  max-height: 70px;
+  opacity: 0.6;
+  transition: 0.4s ease;
+}
+
+/* Efeito Hover */
+.cliente-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Animação Infinita */
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Move 50% porque o conteúdo está duplicado no HTML */
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausa a animação ao interagir */
+.clientes-scroll-container:hover .clientes-scroll {
+  animation-play-state: paused;
+}
+
+/* Ajuste para Celulares */
+@media (max-width: 768px) {
+  .cliente-item {
+    width: 180px;
+    padding: 0 20px;
+  }
+  .cliente-logo img {
+    max-width: 120px;
   }
 }
