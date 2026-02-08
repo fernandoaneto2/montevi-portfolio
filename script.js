@@ -165,7 +165,7 @@ if (contactForm) {
     }
 
     // Send email via mailto
-    const mailtoLink = `mailto:vitortorreao.eng@gmail.com?subject=Novo Contato de ${encodeURIComponent(
+    const mailtoLink = `mailto:montevi.comercial@gmail.com?subject=Novo Contato de ${encodeURIComponent(
       name
     )}&body=Nome: ${encodeURIComponent(name)}%0AE-mail: ${encodeURIComponent(
       email
