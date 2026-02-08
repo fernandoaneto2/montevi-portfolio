@@ -844,7 +844,7 @@ a:hover {
 }
 
 .contact-item h3 {
-  color: var(--accent-light);
+  color: #247ba0;
   margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
@@ -856,7 +856,7 @@ a:hover {
 }
 
 .contact-item a {
-  color: var(--accent-light);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
 }
 
@@ -900,9 +900,9 @@ a:hover {
 }
 
 .contact-form .cta-button {
-  background-color: var(--accent-light);
+  background-color: rgba(255, 255, 255, 0.8);
   color: var(--primary-dark);
-  border-color: var(--accent-light);
+  border-color: rgba(255, 255, 255, 0.8);
   align-self: flex-start;
   font-size: clamp(0.8rem, 1.3vw, 0.95rem);
 }
