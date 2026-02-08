@@ -931,7 +931,7 @@ a:hover {
 }
 
 .footer-content p:last-child {
-  color: var(--accent-light);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
 }
 
