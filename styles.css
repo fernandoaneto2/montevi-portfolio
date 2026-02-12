@@ -2218,3 +2218,121 @@ body {
     max-width: 120px;
   }
 }
+
+/* ========== GLOSSÁRIO CSS ========== */
+/* Arquivo: glossario.css */
+
+.glossario-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  background-color: transparent;
+  color: #1a1e24;
+}
+
+.glossario-container {
+  width: 100%;
+}
+
+/* Cabeçalho */
+.glossario-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.glossario-simbolo {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #2a3b4c;
+  line-height: 1;
+}
+
+.glossario-titulo {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #0f172a;
+  text-transform: lowercase;
+}
+
+/* Grid responsivo */
+.glossario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cards */
+.glossario-item {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.5rem 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.glossario-item:hover {
+  background: #ffffff;
+  border-color: #94a3b8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Ícone */
+.glossario-icone {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* Termo */
+.glossario-termo {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+/* Definição */
+.glossario-definicao {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* Divisor decorativo */
+.glossario-divisor {
+  margin-top: 3rem;
+  width: 60px;
+  height: 2px;
+  background: #cbd5e1;
+}
+
+/* ========== RESPONSIVIDADE EXTRA ========== */
+@media (max-width: 640px) {
+  .glossario-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .glossario-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .glossario-item {
+    padding: 1.25rem;
+  }
+
+  .glossario-titulo {
+    font-size: 1.35rem;
+  }
+}
