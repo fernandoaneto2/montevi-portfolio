@@ -207,6 +207,10 @@ a:hover {
 
 .hero-content {
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  /* padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2.5rem); */
+  gap: 5px;
 }
 
 .hero-location {
@@ -329,7 +333,7 @@ a:hover {
   background-color: var(--primary-dark);
   color: var(--white);
   border: 2px solid var(--primary-dark);
-  max-width: max-content;
+  max-width: 300px;
   font-weight: 600;
   font-size: clamp(0.85rem, 1.5vw, 0.95rem);
   letter-spacing: 1px;
@@ -359,6 +363,31 @@ a:hover {
 
 .cta-button:hover {
   color: var(--white);
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.cta-button-contact {
+  display: flex;
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2.5rem);
+  background-color: #27d366;
+  color: var(--white);
+  border: 2px solid #27d366;
+  max-width: 300px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.cta-button-contact:hover {
+  color: var(--white);
+  background-color: var(--accent-light);
+  border-color: var(--accent-light);
 }
 
 @media (max-width: 480px) {
