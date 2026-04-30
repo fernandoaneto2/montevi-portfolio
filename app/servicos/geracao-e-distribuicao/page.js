@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'Geração e Distribuição | Montevi Engenharia — João Pessoa/PB',
@@ -150,6 +152,8 @@ const cases = [
 
 export default function GeracaoEDistribuicaoPage() {
   return (
+    <>
+    <Navbar />
     <main className="servico-page">
 
       {/* ── 1. Hero ── */}
@@ -176,19 +180,6 @@ export default function GeracaoEDistribuicaoPage() {
             geração distribuída e redes elétricas — com domínio completo das normas
             e ferramentas da Energisa.
           </p>
-          <div className="servico-hero__ctas">
-            <a
-              href="https://wa.me/5511922763114?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Gera%C3%A7%C3%A3o%20e%20Distribui%C3%A7%C3%A3o."
-              className="cta-button-contact"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento
-            </a>
-            <a href="#frentes" className="cta-button">
-              Conheça nossos serviços
-            </a>
-          </div>
         </div>
       </section>
 
@@ -395,11 +386,13 @@ export default function GeracaoEDistribuicaoPage() {
 
       {/* ── Voltar ── */}
       <div style={{ textAlign: 'center', padding: '2rem 1rem 3rem' }}>
-        <Link href="/#services" className="action-button" style={{ display: 'inline-block' }}>
+        <Link href="/#services" className="voltar-link">
           ← Voltar aos Serviços
         </Link>
       </div>
 
     </main>
+    <Footer />
+    </>
   )
 }

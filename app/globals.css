@@ -3079,3 +3079,22 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Botão voltar na página de serviço ── */
+.voltar-link {
+  display: inline-block;
+  width: auto;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.voltar-link:hover {
+  color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  background: var(--accent-lighter);
+}
