@@ -2843,3 +2843,239 @@ body {
     font-size: 0.82rem;
   }
 }
+
+/* ── Sobre a Montevi ── */
+.company-section {
+  background: var(--primary-dark);
+}
+
+.company-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.company-section__eyebrow {
+  color: var(--accent-light);
+  margin-bottom: 0.75rem;
+}
+
+.company-section__titulo {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.company-section__p {
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.7;
+}
+
+.company-section__p + .company-section__p {
+  margin-top: 1.25rem;
+}
+
+.company-dados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.company-dado dt {
+  width: auto;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.3rem;
+}
+
+.company-dado dd {
+  width: auto;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  color: var(--white);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.company-section__imagem {
+  position: relative;
+  align-self: stretch;
+}
+
+.company-section__img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(255, 255, 255, 0.20);
+  border-radius: 12px;
+}
+
+/* ── Casos de referência ── */
+.portfolio-cases {
+  text-align: center;
+}
+
+.portfolio-cases__header {
+  max-width: 680px;
+  margin: 0 auto 4rem;
+}
+
+.portfolio-cases__lista {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.case {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  text-align: left;
+}
+
+.case__galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.case__foto {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--border-light);
+  border-radius: 8px;
+}
+
+.case__foto--destaque {
+  grid-column: 1 / -1;
+  aspect-ratio: 16/9;
+}
+
+.case__conteudo {
+  padding-top: 0.5rem;
+}
+
+.case__tag {
+  display: inline-block;
+  width: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary-light);
+  background: rgba(36, 123, 160, 0.1);
+  border: 1px solid rgba(36, 123, 160, 0.2);
+  padding: 0.25rem 0.875rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.case__titulo {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--primary-dark);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.case__local {
+  font-size: clamp(0.84rem, 1.1vw, 0.9rem);
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.case__local--todo {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.case__escopo-label {
+  width: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.case__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.case__lista li {
+  width: auto;
+  font-size: clamp(0.85rem, 1.1vw, 0.92rem);
+  color: var(--text-dark);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.case__lista li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-light);
+}
+
+.portfolio-cases__fechamento {
+  max-width: 680px;
+  margin: 4rem auto 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-light);
+  font-size: clamp(0.88rem, 1.2vw, 0.95rem);
+  color: var(--text-light);
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .company-section__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .company-section__imagem {
+    display: none;
+  }
+
+  .company-dados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portfolio-cases__lista {
+    gap: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-dados {
+    grid-template-columns: 1fr;
+  }
+}

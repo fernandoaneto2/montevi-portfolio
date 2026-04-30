@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import GeracaoDistribuicaoCarousel from '@/components/GeracaoDistribuicaoCarousel'
 
 export const metadata = {
-  title: 'Geração e Distribuição | Engenharia Elétrica em João Pessoa — Monteví',
+  title: 'Geração e Distribuição | Montevi Engenharia — João Pessoa/PB',
   description:
-    'Projetos e manutenção de subestações aéreas e abrigadas, geração distribuída e redes elétricas em João Pessoa, PB. Domínio completo das normas e ferramentas da Energisa — NDU 013, NDU 015, APR Web. ART em todas as etapas.',
+    'Montevi Engenharia — projeto, execução e manutenção em subestações, geração distribuída e redes elétricas em João Pessoa/PB. Conheça a empresa e nossos casos de referência.',
 }
 
 const frentes = [
@@ -101,6 +100,54 @@ const timeline = [
   },
 ]
 
+const dadosEmpresa = [
+  { label: 'Razão social', valor: 'Metta Engenharia LTDA' },
+  { label: 'Nome fantasia', valor: 'Montevi Engenharia' },
+  { label: 'CNPJ', valor: '54.308.461/0001-55' },
+  { label: 'Fundação', valor: 'Março de 2024' },
+  { label: 'Sede', valor: 'João Pessoa — PB' },
+  { label: 'Atuação', valor: 'Paraíba e Nordeste' },
+]
+
+const cases = [
+  {
+    tag: 'Subestação abrigada',
+    titulo: 'Subestação Abrigada — Edson Ramalho',
+    localizacao: 'Edson Ramalho, João Pessoa — PB',
+    escopo: [
+      'Manutenção completa da subestação abrigada',
+      'Modernização do sistema de proteção',
+      'Parametrização de relés',
+      'Adequação à NBR 14039 e às normas Energisa',
+    ],
+    // TODO: inserir fotos reais do projeto Edson Ramalho (public/Images/cases/edson-ramalho/)
+  },
+  {
+    tag: 'Projeto e execução de rede',
+    titulo: 'Iluminação Pública — Rede Completa',
+    localizacao: null, // TODO: confirmar município/bairro
+    escopo: [
+      'Projeto completo de rede de iluminação pública',
+      'Instalação de transformador',
+      'Posteamento e cabeamento',
+      'Comissionamento e energização junto à Energisa',
+    ],
+    // TODO: inserir fotos reais do projeto de iluminação pública (public/Images/cases/iluminacao-publica/)
+  },
+  {
+    tag: 'Subestação aérea',
+    titulo: 'Subestação Aérea',
+    localizacao: null, // TODO: confirmar localização
+    escopo: [
+      'Projeto e montagem de subestação aérea em poste',
+      'Instalação de transformador e dispositivos de proteção',
+      'Aterramento conforme NBR 5419',
+      'Comissionamento e energização',
+    ],
+    // TODO: inserir fotos reais da subestação aérea (public/Images/cases/subestacao-aerea/)
+  },
+]
+
 export default function GeracaoEDistribuicaoPage() {
   return (
     <main className="servico-page">
@@ -170,7 +217,44 @@ export default function GeracaoEDistribuicaoPage() {
         </div>
       </section>
 
-      {/* ── 3. Frentes de atuação ── */}
+      {/* ── 3. Sobre a Montevi ── */}
+      <section className="company-section servico-section">
+        <div className="company-section__inner">
+          <div className="company-section__texto">
+            <p className="service-category company-section__eyebrow">QUEM SOMOS</p>
+            <h2 className="section-title company-section__titulo">
+              Engenharia elétrica feita por quem conhece o setor por dentro
+            </h2>
+            <p className="company-section__p">
+              A Montevi Engenharia é um escritório de engenharia elétrica sediado em João Pessoa,
+              na Paraíba, com atuação em todo o Nordeste. Reunimos em uma única empresa toda a cadeia
+              de engenharia elétrica de média e baixa tensão — do projeto inicial à execução em campo,
+              passando pela manutenção e pela homologação junto à concessionária.
+            </p>
+            <p className="company-section__p">
+              Nossa equipe técnica é formada por engenheiros com vivência direta em escritórios de
+              referência do setor elétrico e nos processos da Energisa. Essa experiência se traduz em
+              prazos de aprovação mais curtos, menos retrabalho e segurança técnica em cada etapa entregue.
+            </p>
+            <dl className="company-dados">
+              {dadosEmpresa.map((d) => (
+                <div className="company-dado" key={d.label}>
+                  <dt>{d.label}</dt>
+                  <dd>{d.valor}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div className="company-section__imagem">
+            {/* TODO: substituir pelo componente Image com foto institucional da equipe ou da sede
+                Proporção sugerida: 4:5 ou 1:1
+                Caminho: /Images/foto-equipe.jpg (ou similar) */}
+            <div className="company-section__img-placeholder" aria-hidden="true" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. Frentes de atuação ── */}
       <section id="frentes" className="frentes servico-section" style={{ background: 'var(--accent-lighter)' }}>
         <div className="frentes__header">
           <h2 className="section-title">Frentes de atuação</h2>
@@ -194,7 +278,7 @@ export default function GeracaoEDistribuicaoPage() {
         </div>
       </section>
 
-      {/* ── 4. Por que contratar ── */}
+      {/* ── 5. Por que contratar ── */}
       <section className="diferenciais servico-section">
         <h2 className="section-title">Por que contratar a Montevi</h2>
         <p className="section-subtitle" style={{ marginBottom: '3rem' }}>
@@ -210,18 +294,63 @@ export default function GeracaoEDistribuicaoPage() {
         </div>
       </section>
 
-      {/* ── 5. Portfólio ── */}
-      <section className="portfolio servico-section" style={{ background: 'var(--accent-lighter)' }}>
-        <h2 className="section-title">Projetos Realizados</h2>
-        <p className="section-subtitle">
-          {/* TODO: atualizar subtítulo com número real de projetos entregues */}
-          Execuções em geração e distribuição — clique nas setas para navegar
+      {/* ── 6. Casos de referência ── */}
+      <section className="portfolio-cases servico-section" style={{ background: 'var(--accent-lighter)' }}>
+        <div className="portfolio-cases__header">
+          <p className="service-category">PORTFÓLIO</p>
+          <h2 className="section-title">Casos de referência</h2>
+          <p className="section-subtitle">
+            Três projetos representativos da nossa atuação em diferentes frentes da engenharia elétrica.
+          </p>
+        </div>
+
+        <div className="portfolio-cases__lista">
+          {cases.map((caso, i) => {
+            const isReverse = i % 2 === 1
+            const galeria = (
+              <div className="case__galeria">
+                {/* TODO: substituir pelos componentes Image com fotos reais */}
+                <div className="case__foto case__foto--destaque" />
+                <div className="case__foto" />
+                <div className="case__foto" />
+              </div>
+            )
+            const conteudo = (
+              <div className="case__conteudo">
+                <span className="case__tag">{caso.tag}</span>
+                <h3 className="case__titulo">{caso.titulo}</h3>
+                {caso.localizacao ? (
+                  <p className="case__local">{caso.localizacao}</p>
+                ) : (
+                  <p className="case__local case__local--todo">
+                    {/* TODO: confirmar localização */}
+                    Localização a confirmar
+                  </p>
+                )}
+                <p className="case__escopo-label">Escopo entregue</p>
+                <ul className="case__lista">
+                  {caso.escopo.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )
+            return (
+              <div className={`case${isReverse ? ' case--reverse' : ''}`} key={caso.titulo}>
+                {isReverse ? conteudo : galeria}
+                {isReverse ? galeria : conteudo}
+              </div>
+            )
+          })}
+        </div>
+
+        <p className="portfolio-cases__fechamento">
+          Além desses cases, contamos com um amplo histórico de projetos elétricos
+          elaborados, analisados e aprovados junto à Energisa.
         </p>
-        {/* TODO: substituir placeholders pelas fotos e dados reais dos projetos */}
-        <GeracaoDistribuicaoCarousel />
       </section>
 
-      {/* ── 6. Como funciona o atendimento ── */}
+      {/* ── 7. Como funciona o atendimento ── */}
       <section className="atendimento servico-section">
         <div className="atendimento__inner">
           <h2 className="section-title">Como funciona o atendimento</h2>
@@ -242,7 +371,7 @@ export default function GeracaoEDistribuicaoPage() {
         </div>
       </section>
 
-      {/* ── 7. CTA final ── */}
+      {/* ── 8. CTA final ── */}
       <section className="cta-final">
         <div className="cta-final__inner">
           <h2 className="cta-final__titulo">
