@@ -2580,3 +2580,266 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   PÁGINA GERAÇÃO E DISTRIBUIÇÃO — SEÇÕES NOVAS
+   ============================================ */
+
+/* Hero CTAs */
+.servico-hero__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ── Sobre o serviço ── */
+.servico-sobre {
+  text-align: center;
+}
+
+.servico-sobre__inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.servico-sobre__textos p + p {
+  margin-top: 1.25rem;
+}
+
+/* ── Frentes de atuação ── */
+.frentes {
+  text-align: center;
+}
+
+.frentes__header {
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.frentes__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.frente {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-top: 4px solid var(--primary-dark);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  text-align: left;
+  transition: var(--transition);
+}
+
+.frente:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(10, 36, 99, 0.1);
+}
+
+.frente__titulo {
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.frente__descricao {
+  font-size: clamp(0.88rem, 1.2vw, 0.95rem);
+  color: var(--text-light);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.frente__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.frente__lista li {
+  width: auto;
+  font-size: clamp(0.84rem, 1.1vw, 0.9rem);
+  color: var(--text-dark);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.frente__lista li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-light);
+}
+
+/* ── Diferenciais ── */
+.diferenciais {
+  text-align: center;
+}
+
+.diferenciais__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.diferencial {
+  background: var(--accent-lighter);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.75rem;
+  text-align: left;
+}
+
+.diferencial__titulo {
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.diferencial__texto {
+  font-size: clamp(0.85rem, 1.1vw, 0.92rem);
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Timeline de atendimento ── */
+.atendimento {
+  background: var(--white);
+}
+
+.atendimento__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.atendimento__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.atendimento__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.atendimento__item:last-child {
+  border-bottom: none;
+}
+
+.atendimento__num {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary-dark);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.01em;
+}
+
+.atendimento__conteudo {
+  flex: 1;
+  padding-top: 0.25rem;
+}
+
+.atendimento__titulo {
+  display: block;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.atendimento__desc {
+  font-size: clamp(0.85rem, 1.1vw, 0.92rem);
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── CTA final ── */
+.cta-final {
+  background: var(--primary-dark);
+  padding: clamp(3.5rem, 7vw, 5.5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.cta-final__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-final__titulo {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.cta-final__sub {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.80);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.cta-final__btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .servico-hero__ctas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .frentes__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diferenciais__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atendimento__item {
+    gap: 1rem;
+  }
+
+  .atendimento__num {
+    width: 40px;
+    height: 40px;
+    font-size: 0.82rem;
+  }
+}

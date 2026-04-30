@@ -87,17 +87,17 @@ export default function Services() {
         <ServiceCard
           service="complementary"
           image="/Images/subestacao-predial.png"
-          alt="Geração e Distribuição - Subestação e Geradores"
+          alt="Geração e Distribuição — Subestações, GD e Projetos Elétricos"
           title="Geração e Distribuição"
-          excerpt="Subestações abrigadas exigem manutenções preventivas."
+          excerpt="Projeto, manutenção e homologação de subestações, geração distribuída e redes elétricas — com domínio completo das normas da Energisa."
           backTitle="Geração e Distribuição"
-          backDescription="Manutenção de subestação abrigada 600kVA (emergencial, preventiva e corretiva)."
+          backDescription="Engenharia elétrica completa, do projeto à energização."
           listContent={
             <ul className="services-list">
-              <li>Troca de todo o sistema de proteção</li>
-              <li>Parametrização de relê</li>
-              <li>Manutenção de QGBT e QTA</li>
-              <li>Manutenção de gerador</li>
+              <li>Subestações aéreas e abrigadas — projeto, montagem e manutenção</li>
+              <li>Geração distribuída (GD) — projeto, conexão e homologação</li>
+              <li>Escritório de projetos — redes, iluminação pública e instalações</li>
+              <li>Ferramentas Energisa — APR Web, NDU 013 e NDU 015</li>
             </ul>
           }
           detailsLink="/servicos/geracao-e-distribuicao"
