@@ -1,19 +1,19 @@
-import Link from 'next/link'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: 'Política de Privacidade | Montevi Engenharia',
+  title: "Política de Privacidade | Montevi Engenharia",
   description:
-    'Política de privacidade e proteção de dados da Montevi Engenharia (Metta Engenharia LTDA) conforme a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).',
-}
+    "Política de privacidade e proteção de dados da Montevi Engenharia (Montevi Engenharia LTDA) conforme a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).",
+};
 
-const ULTIMA_ATUALIZACAO = '30 de abril de 2026'
-const CONTROLADOR = 'Metta Engenharia LTDA'
-const NOME_FANTASIA = 'Montevi Engenharia'
-const CNPJ = '54.308.461/0001-55'
-const SEDE = 'João Pessoa — PB'
-const EMAIL_CONTATO = 'contato@montevi.eng.br'
+const ULTIMA_ATUALIZACAO = "30 de abril de 2026";
+const CONTROLADOR = "Montevi Engenharia LTDA";
+const NOME_FANTASIA = "Montevi Engenharia";
+const CNPJ = "54.308.461/0001-55";
+const SEDE = "João Pessoa — PB";
+const EMAIL_CONTATO = "contato@montevi.eng.br";
 
 export default function PoliticaDePrivacidade() {
   return (
@@ -31,14 +31,14 @@ export default function PoliticaDePrivacidade() {
           <section className="privacidade-secao">
             <h2>1. Identificação do Controlador</h2>
             <p>
-              Esta Política de Privacidade é aplicável ao site da{' '}
-              <strong>{NOME_FANTASIA}</strong>, nome fantasia de{' '}
-              <strong>{CONTROLADOR}</strong>, inscrita no CNPJ sob o nº{' '}
+              Esta Política de Privacidade é aplicável ao site da{" "}
+              <strong>{NOME_FANTASIA}</strong>, nome fantasia de{" "}
+              <strong>{CONTROLADOR}</strong>, inscrita no CNPJ sob o nº{" "}
               <strong>{CNPJ}</strong>, com sede em <strong>{SEDE}</strong>.
             </p>
             <p>
               Para questões relacionadas a privacidade e proteção de dados,
-              entre em contato pelo e-mail:{' '}
+              entre em contato pelo e-mail:{" "}
               <a href={`mailto:${EMAIL_CONTATO}`}>{EMAIL_CONTATO}</a>.
             </p>
           </section>
@@ -106,8 +106,8 @@ export default function PoliticaDePrivacidade() {
               </li>
               <li>
                 <strong>Legítimo interesse</strong> (Art. 7º, IX): para análise
-                de uso do site e melhoria dos serviços, desde que não
-                prevaleçam sobre os direitos do titular;
+                de uso do site e melhoria dos serviços, desde que não prevaleçam
+                sobre os direitos do titular;
               </li>
               <li>
                 <strong>Cumprimento de obrigação legal</strong> (Art. 7º, II):
@@ -126,8 +126,7 @@ export default function PoliticaDePrivacidade() {
             <ul>
               <li>
                 Com prestadores de serviços tecnológicos (ex.: hospedagem,
-                análise de dados) sob obrigação contratual de
-                confidencialidade;
+                análise de dados) sob obrigação contratual de confidencialidade;
               </li>
               <li>
                 Com autoridades públicas, em cumprimento de determinação legal
@@ -152,9 +151,7 @@ export default function PoliticaDePrivacidade() {
                 Dados de contratos e documentação técnica: até 10 anos (ABNT NBR
                 e legislação fiscal);
               </li>
-              <li>
-                Dados de navegação e cookies analíticos: até 13 meses;
-              </li>
+              <li>Dados de navegação e cookies analíticos: até 13 meses;</li>
               <li>
                 Dados fornecidos por consentimento: até a revogação do
                 consentimento.
@@ -192,9 +189,9 @@ export default function PoliticaDePrivacidade() {
               </li>
             </ul>
             <p>
-              Para exercer seus direitos, entre em contato pelo e-mail:{' '}
-              <a href={`mailto:${EMAIL_CONTATO}`}>{EMAIL_CONTATO}</a>. Responderemos
-              em até 15 dias úteis.
+              Para exercer seus direitos, entre em contato pelo e-mail:{" "}
+              <a href={`mailto:${EMAIL_CONTATO}`}>{EMAIL_CONTATO}</a>.
+              Responderemos em até 15 dias úteis.
             </p>
           </section>
 
@@ -247,5 +244,5 @@ export default function PoliticaDePrivacidade() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
