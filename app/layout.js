@@ -40,6 +40,9 @@ export const metadata = {
       "Projeto, execução e manutenção em subestações, geração distribuída e redes elétricas em João Pessoa/PB.",
     images: ["/Images/subestacao-predial.png"],
   },
+  verification: {
+    google: "cXxUCr3WOn0j6wmhY5T7PmfzeGju_LdaUP1KnjV1WvU",
+  },
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
