@@ -51,29 +51,6 @@ const frentes = [
   },
 ];
 
-const diferenciais = [
-  {
-    titulo: "Domínio das ferramentas Energisa",
-    texto:
-      "Conhecemos por dentro o APR Web, a Agência Virtual e os fluxos de aprovação da concessionária — o que reduz prazos e elimina retrabalho.",
-  },
-  {
-    titulo: "Equipe com vivência em concessionária",
-    texto:
-      "Profissionais com passagem por escritórios de referência do setor, com formação técnica consolidada nos processos de projeto e manutenção elétrica.",
-  },
-  {
-    titulo: "Escopo completo",
-    texto:
-      "Do projeto à energização, com responsabilidade técnica (ART) em cada etapa — sem terceirizar a parte crítica do serviço.",
-  },
-  {
-    titulo: "Conformidade normativa",
-    texto:
-      "Projetos e execuções alinhados às normas ABNT (NBR 5410, NBR 14039, NBR 5419) e às Normas de Distribuição da Energisa (NDU).",
-  },
-];
-
 const timeline = [
   {
     num: "01",
@@ -102,15 +79,6 @@ const timeline = [
   },
 ];
 
-const dadosEmpresa = [
-  { label: "Razão social", valor: "Metta Engenharia LTDA" },
-  { label: "Nome fantasia", valor: "Montevi Engenharia" },
-  { label: "CNPJ", valor: "54.308.461/0001-55" },
-  { label: "Fundação", valor: "Março de 2024" },
-  { label: "Sede", valor: "João Pessoa — PB" },
-  { label: "Atuação", valor: "Paraíba e Nordeste" },
-];
-
 const cases = [
   {
     tag: "Subestação abrigada",
@@ -122,31 +90,43 @@ const cases = [
       "Parametrização de relés",
       "Adequação à NBR 14039 e às normas Energisa",
     ],
-    // TODO: inserir fotos reais do projeto Edson Ramalho (public/Images/cases/edson-ramalho/)
+    fotos: {
+      destaque: "/Images/subestacao-abrigada.jpeg",
+      s1: "/Images/subestacao-abrigada2.jpeg",
+      s2: "/Images/subestacao-abrigada3.jpeg",
+    },
   },
   {
     tag: "Projeto e execução de rede",
     titulo: "Iluminação Pública — Rede Completa",
-    localizacao: null, // TODO: confirmar município/bairro
+    localizacao: null,
     escopo: [
       "Projeto completo de rede de iluminação pública",
       "Instalação de transformador",
       "Posteamento e cabeamento",
       "Comissionamento e energização junto à Energisa",
     ],
-    // TODO: inserir fotos reais do projeto de iluminação pública (public/Images/cases/iluminacao-publica/)
+    fotos: {
+      destaque: "/Images/iluminacao-publica1.jpeg",
+      s1: "/Images/iluminacao-publica2.jpeg",
+      s2: "/Images/iluminacao-publica4.jpeg",
+    },
   },
   {
     tag: "Subestação aérea",
     titulo: "Subestação Aérea",
-    localizacao: null, // TODO: confirmar localização
+    localizacao: null,
     escopo: [
       "Projeto e montagem de subestação aérea em poste",
       "Instalação de transformador e dispositivos de proteção",
       "Aterramento conforme NBR 5419",
       "Comissionamento e energização",
     ],
-    // TODO: inserir fotos reais da subestação aérea (public/Images/cases/subestacao-aerea/)
+    fotos: {
+      destaque: "/Images/subestacao-aerea1.jpeg",
+      s1: "/Images/subestacao-abrigada2.jpeg",
+      s2: "/Images/subestacao-abrigada3.jpeg",
+    },
   },
 ];
 
@@ -269,10 +249,15 @@ export default function SubestacoesEGeradoresPage() {
               const isReverse = i % 2 === 1;
               const galeria = (
                 <div className="case__galeria">
-                  {/* TODO: substituir pelos componentes Image com fotos reais */}
-                  <div className="case__foto case__foto--destaque" />
-                  <div className="case__foto" />
-                  <div className="case__foto" />
+                  <div className="case__foto case__foto--destaque">
+                    <Image src={caso.fotos.destaque} alt={caso.titulo} fill style={{ objectFit: "cover" }} />
+                  </div>
+                  <div className="case__foto">
+                    <Image src={caso.fotos.s1} alt="" fill style={{ objectFit: "cover" }} />
+                  </div>
+                  <div className="case__foto">
+                    <Image src={caso.fotos.s2} alt="" fill style={{ objectFit: "cover" }} />
+                  </div>
                 </div>
               );
               const conteudo = (
