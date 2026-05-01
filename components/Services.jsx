@@ -1,235 +1,208 @@
-'use client'
-
-import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function ServiceCard({ service, image, alt, title, excerpt, backTitle, backDescription, listContent, detailsLink }) {
-  const [flipped, setFlipped] = useState(false)
+const WA = 'https://wa.me/5511922763114?text='
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      setFlipped((f) => !f)
-    }
-  }
-
+function ShieldIcon() {
   return (
-    <div className="service-card-wrapper">
-      <div
-        className={`service-card-flip${flipped ? ' is-flipped' : ''}`}
-        role="button"
-        tabIndex={0}
-        data-service={service}
-        aria-label={`${title} - Clique para ver detalhes`}
-        onClick={() => setFlipped((f) => !f)}
-        onKeyDown={handleKeyDown}
-      >
-        <div className="service-card-front">
-          <div className="front-content">
-            <div className="image-modern-container">
-              <Image
-                src={image}
-                alt={alt}
-                fill
-                className="modern-image"
-                sizes="350px"
-                style={{ objectFit: 'cover' }}
-              />
-              <div className="image-overlay"></div>
-            </div>
-            <div className="service-info">
-              <p className="service-category">ESPECIALIDADE</p>
-              <h3 className="service-title">{title}</h3>
-              <p className="service-excerpt">{excerpt}</p>
-            </div>
-          </div>
+    <svg
+      aria-hidden="true"
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={{ flexShrink: 0, marginTop: '2px' }}
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    </svg>
+  )
+}
+
+const servicos = [
+  {
+    tag: 'Engenharia Elétrica',
+    titulo: 'Subestações e Geradores',
+    descricao:
+      'Projeto, montagem, manutenção e modernização de subestações aéreas, abrigadas e grupos geradores — com máxima confiabilidade energética e segurança operacional.',
+    bullets: [
+      'Subestações aéreas e abrigadas (média tensão)',
+      'Manutenção preventiva, preditiva, corretiva e emergencial',
+      'Modernização de proteção e parametrização de relés',
+      'Grupos Geradores (GMG) e Quadros de Transferência (QTA)',
+    ],
+    normas: ['NBR 14039', 'NR-10', 'NR-35', 'NDU Energisa'],
+    seguranca:
+      'Execução com PT (Permissão de Trabalho), travamento, bloqueio e LOTO conforme NR-10.',
+    imagem: '/Images/subestacao-predial.png',
+    alt: 'Subestação abrigada com painéis de proteção elétrica',
+    href: '/servicos/subestacoes-e-geradores',
+    waText: 'Olá! Tenho interesse no serviço de Subestações e Geradores.',
+    priority: true,
+  },
+  {
+    tag: 'Engenharia Elétrica',
+    titulo: 'Redes de Distribuição',
+    descricao:
+      'Projeto e execução de redes de distribuição aérea e subterrânea em média e baixa tensão, com domínio total dos procedimentos da Energisa.',
+    bullets: [
+      'Redes de distribuição aérea (RDA) e subterrânea (RDS)',
+      'Extensão e reforço de rede para novas cargas',
+      'Adequação de padrão de entrada e medição',
+      'Submissão e acompanhamento via APR Web e Agência Virtual',
+    ],
+    normas: ['NBR 5410', 'NBR 14039', 'NR-10', 'NDU 001/Energisa'],
+    seguranca:
+      'Equipe certificada NR-10 e NR-35, com APR (Análise Preliminar de Risco) em todas as frentes de obra.',
+    // TODO: substituir por foto real de rede de distribuição aérea (poste/transformador)
+    imagem: '/Images/engenharia-civil.jpg',
+    alt: 'Rede de distribuição elétrica aérea em poste',
+    href: '/servicos/redes-de-distribuicao',
+    waText: 'Olá! Tenho interesse no serviço de Redes de Distribuição.',
+    priority: false,
+  },
+  {
+    tag: 'Infraestrutura Pública',
+    titulo: 'Iluminação Pública',
+    descricao:
+      'Projeto e execução de redes completas de iluminação pública, da modelagem fotométrica à energização junto à concessionária.',
+    bullets: [
+      'Projeto luminotécnico conforme NBR 5101',
+      'Posteamento, cabeamento e instalação de transformadores',
+      'Eficientização energética com luminárias LED',
+      'Comissionamento e energização junto à Energisa',
+    ],
+    normas: ['NBR 5101', 'NBR 5410', 'NR-10', 'NR-35'],
+    seguranca:
+      'Trabalho em altura com NR-35, sinalização viária e isolamento de área conforme normas de tráfego.',
+    imagem: '/Images/projeto-sistema-de-iluminacao.png',
+    alt: 'Projeto de sistema de iluminação pública com luminárias LED',
+    href: '/servicos/iluminacao-publica',
+    waText: 'Olá! Tenho interesse no serviço de Iluminação Pública.',
+    priority: false,
+  },
+  {
+    tag: 'Escritório Técnico',
+    titulo: 'Projetos e Análises',
+    descricao:
+      'Hub completo de projetos elétricos: elaboramos, analisamos e aprovamos projetos junto à concessionária, com responsabilidade técnica em todas as etapas.',
+    bullets: [
+      'Projetos elétricos prediais, industriais e de redes',
+      'Análise técnica e revisão de projetos de terceiros',
+      'Submissão e acompanhamento via APR Web da Energisa',
+      'Emissão de ART e memoriais descritivos completos',
+    ],
+    normas: ['NBR 5410', 'NBR 14039', 'NBR 5419', 'NDU 013', 'NDU 015'],
+    seguranca:
+      'Todo projeto entregue com ART do CREA — segurança jurídica e técnica do início ao fim.',
+    imagem: '/Images/projeto-eletrico.png',
+    alt: 'Diagrama unifilar de projeto elétrico em desenvolvimento',
+    href: '/servicos/projetos-e-analises',
+    waText: 'Olá! Tenho interesse no serviço de Projetos e Análises.',
+    priority: false,
+  },
+  {
+    tag: 'Geração Distribuída',
+    titulo: 'Geração Distribuída (GD)',
+    descricao:
+      'Projeto, viabilidade e homologação de sistemas de microgeração e minigeração distribuída, com conexão garantida junto à Energisa.',
+    bullets: [
+      'Estudo de viabilidade técnica e análise da rede',
+      'Projeto elétrico completo (memorial, unifilar, folha de dados)',
+      'Submissão e acompanhamento via APR Web até a homologação',
+      'Adequação do padrão de entrada e troca do medidor',
+    ],
+    normas: ['NDU 013', 'NDU 015', 'NBR 16690', 'NBR 5410', 'REN 1.000/2021'],
+    seguranca:
+      'Projetos com proteção anti-ilhamento e desligamento automático conforme NDU Energisa.',
+    imagem: '/Images/paineis-solares4.jpg',
+    alt: 'Painéis solares fotovoltaicos de sistema de geração distribuída',
+    href: '/servicos/geracao-distribuida',
+    waText: 'Olá! Tenho interesse no serviço de Geração Distribuída.',
+    priority: false,
+  },
+]
+
+function ServiceCard({ servico }) {
+  return (
+    <article className="svc-card">
+      <div className="svc-card__img-wrap">
+        <Image
+          src={servico.imagem}
+          alt={servico.alt}
+          fill
+          className="svc-card__img"
+          sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+          priority={servico.priority}
+        />
+      </div>
+
+      <div className="svc-card__body">
+        <p className="svc-card__tag">{servico.tag}</p>
+
+        <h3 className="svc-card__titulo">{servico.titulo}</h3>
+
+        <p className="svc-card__descricao">{servico.descricao}</p>
+
+        <ul className="svc-card__bullets" aria-label="Serviços incluídos">
+          {servico.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+
+        <div
+          className="svc-card__normas"
+          aria-label={`Normas atendidas: ${servico.normas.join(', ')}`}
+        >
+          {servico.normas.map((n) => (
+            <span key={n} className="svc-card__badge">
+              {n}
+            </span>
+          ))}
         </div>
-        <div className="service-card-back">
-          <div className="back-header">
-            <h3>{backTitle}</h3>
-          </div>
-          <div className="back-body">
-            <p className="back-description">{backDescription}</p>
-            {listContent}
-            <a href="#contact" className="action-button" onClick={(e) => e.stopPropagation()}>
-              Solicitar Orçamento
-            </a>
-            {detailsLink && (
-              <Link
-                href={detailsLink}
-                className="action-button"
-                style={{ marginTop: '8px' }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                Ver mais
-              </Link>
-            )}
-          </div>
-          <div className="back-footer">
-            <span>Clique para voltar</span>
-          </div>
+
+        <div className="svc-card__seguranca">
+          <ShieldIcon />
+          <span>{servico.seguranca}</span>
+        </div>
+
+        <div className="svc-card__ctas">
+          <Link href={servico.href} className="svc-card__cta-primary">
+            Ver detalhes →
+          </Link>
+          <a
+            href={`${WA}${encodeURIComponent(servico.waText)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="svc-card__cta-secondary"
+          >
+            Solicitar orçamento
+          </a>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
 
 export default function Services() {
   return (
     <section id="services" className="services" role="region" aria-label="Serviços">
-      <h2 className="section-title">Nossos Serviços</h2>
+      <p className="services__eyebrow">Áreas de atuação</p>
+      <h2 className="section-title">
+        Engenharia elétrica com segurança normatizada
+      </h2>
       <p className="section-subtitle">
-        Três nichos de especialização para suas necessidades
+        Cinco frentes especializadas, cada uma com domínio normativo completo e
+        equipe certificada para garantir execução segura e em conformidade.
       </p>
 
-      <div className="services-container">
-        <ServiceCard
-          service="complementary"
-          image="/Images/subestacao-predial.png"
-          alt="Geração e Distribuição — Subestações, GD e Projetos Elétricos"
-          title="Geração e Distribuição"
-          excerpt="Projeto, manutenção e homologação de subestações, geração distribuída e redes elétricas — com domínio completo das normas da Energisa."
-          backTitle="Geração e Distribuição"
-          backDescription="Engenharia elétrica completa, do projeto à energização."
-          listContent={
-            <ul className="services-list">
-              <li>Subestações aéreas e abrigadas — projeto, montagem e manutenção</li>
-              <li>Geração distribuída (GD) — projeto, conexão e homologação</li>
-              <li>Escritório de projetos — redes, iluminação pública e instalações</li>
-              <li>Ferramentas Energisa — APR Web, NDU 013 e NDU 015</li>
-            </ul>
-          }
-          detailsLink="/servicos/geracao-e-distribuicao"
-        />
-
-        <ServiceCard
-          service="civil"
-          image="/Images/paineis-solares4.jpg"
-          alt="Projeto de Engenharia Civil - Estrutura moderna"
-          title="Geração Fotovoltaica"
-          excerpt="Projetos estruturais inovadores e soluções construtivas."
-          backTitle="Geração Fotovoltaica"
-          backDescription="Nossa equipe realiza desde pequenas reformas até grandes projetos estruturais, sempre com foco em qualidade, segurança e eficiência energética."
-          listContent={
-            <>
-              <h4 style={{ color: '#247ba0', marginBottom: '15px', fontSize: '1.2rem' }}>
-                Nossas Soluções:
-              </h4>
-              <ul className="services-list">
-                <li>On Grid</li>
-                <li>On Grid com Micro Inversor</li>
-                <li>Off Grid</li>
-                <li>Híbrido</li>
-                <li>A Bomba Solar</li>
-              </ul>
-            </>
-          }
-        />
-
-        <ServiceCard
-          service="electrical"
-          image="/Images/projetos-complementares2.jpg"
-          alt="Projeto de Engenharia - BIM e Automação"
-          title="Projetos de Engenharia"
-          excerpt="Projetos desenvolvidos em BIM, com modelagem 2D e 3D."
-          backTitle="Projetos de Engenharia"
-          backDescription="Todos os projetos são desenvolvidos em BIM, com levantamento automático de materiais federados, assegurando fidelidade ao projeto, eficiência construtiva e economia."
-          listContent={
-            <ul className="services-list">
-              <li>
-                <strong>Escopo:</strong> ART (CREA), memoriais, compatibilização e As Built
-              </li>
-              <li>
-                <strong>Elétricos:</strong> Para todo tipo de Empreendimento (BT/MT, medição agrupada, cabeamento e SPDA)
-              </li>
-              <li>
-                <strong>Complementares:</strong> PCI, hidrossanitário, gás, climatização e drenagem
-              </li>
-            </ul>
-          }
-        />
-
-        <ServiceCard
-          service="complementary"
-          image="/Images/foto-carregadore-eletricos.png"
-          alt="Carregadores Elétricos - Infraestrutura para veículos elétricos"
-          title="Carregadores Elétricos"
-          excerpt="Soluções completas para infraestrutura de recarga veicular."
-          backTitle="Carregadores Elétricos"
-          backDescription="Projetos e especificações para infraestrutura de carregamento de veículos elétricos, atendendo normas técnicas, capacidade elétrica instalada e expansão futura."
-          listContent={
-            <ul className="services-list">
-              <li>
-                <strong>Infraestrutura:</strong> dimensionamento elétrico e adequações
-              </li>
-              <li>
-                <strong>Carregadores:</strong> AC e DC (residencial, comercial e industrial)
-              </li>
-              <li>
-                <strong>Proteções:</strong> disjuntores, DPS e aterramento
-              </li>
-              <li>
-                <strong>Normas:</strong> NBR, concessionárias e segurança elétrica
-              </li>
-            </ul>
-          }
-        />
-
-        <ServiceCard
-          service="electrical"
-          image="/Images/engenharia-civil.jpg"
-          alt="Projeto de Engenharia - BIM e Automação"
-          title="Manutenção e Construção"
-          excerpt="Inteligência em infraestrutura para melhor performance dos seus sistemas."
-          backTitle="Manutenção e Construção"
-          backDescription="Garantimos eficiência operacional através de serviços especializados em construção e manutenção elétrica, reduzindo falhas e aumentando a vida útil dos sistemas."
-          listContent={
-            <ul className="services-list">
-              <li>Manutenção Preventiva</li>
-              <li>Manutenção Corretiva Emergencial</li>
-              <li>Reformas e Ampliações Elétricas</li>
-              <li>Laudos Técnicos e Inspeções</li>
-              <li>Modernização de Sistemas</li>
-            </ul>
-          }
-        />
-
-        <ServiceCard
-          service="complementary"
-          image="/Images/subestacao-predial.png"
-          alt="Sistemas de Segurança"
-          title="Sistemas de Segurança"
-          excerpt="Máxima confiabilidade energética e segurança operacional."
-          backTitle="Sistemas de Segurança"
-          backDescription="Soluções completas em subestações e grupos geradores, eliminando paradas não programadas e otimizando o consumo de energia."
-          listContent={
-            <ul className="services-list">
-              <li>Manutenção Preditiva e Preventiva em Subestações</li>
-              <li>Instalação e Configuração de Grupos Geradores (GMG)</li>
-              <li>Modernização de Painéis e Quadros de Transferência (QTA)</li>
-              <li>Consultoria Técnica para Eficiência Energética</li>
-            </ul>
-          }
-        />
-
-        <ServiceCard
-          service="complementary"
-          image="/Images/subestacao-predial.png"
-          alt="Subestação e Geradores"
-          title="Subestações e Geradores"
-          excerpt="Máxima confiabilidade energética e segurança operacional."
-          backTitle="Subestações e Geradores"
-          backDescription="Soluções completas em subestações e grupos geradores, eliminando paradas não programadas e otimizando o consumo de energia."
-          listContent={
-            <ul className="services-list">
-              <li>Manutenção Preditiva e Preventiva em Subestações</li>
-              <li>Instalação e Configuração de Grupos Geradores (GMG)</li>
-              <li>Modernização de Painéis e Quadros de Transferência (QTA)</li>
-              <li>Consultoria Técnica para Eficiência Energética</li>
-            </ul>
-          }
-        />
+      <div className="svc-grid">
+        {servicos.map((s) => (
+          <ServiceCard key={s.titulo} servico={s} />
+        ))}
       </div>
     </section>
   )
