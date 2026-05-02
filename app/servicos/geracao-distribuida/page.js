@@ -91,9 +91,9 @@ const cases = [
       "Homologação junto à Energisa e troca do medidor",
     ],
     fotos: {
-      destaque: "/Images/geracao-distribuicao/placeholder-1.png",
-      s1: "/Images/geracao-distribuicao/placeholder-2.png",
-      s2: "/Images/paineis-solares2.jpg",
+      destaque: "/Images/paineis-solares2.jpg",
+      s1: "/Images/paineis-solares3.jpg",
+      s2: "/Images/foto-paineis-solares.jpg",
     },
   },
   {
@@ -107,9 +107,9 @@ const cases = [
       "Homologação completa e acompanhamento até a troca do medidor",
     ],
     fotos: {
-      destaque: "/Images/geracao-distribuicao/placeholder-3.png",
-      s1: "/Images/geracao-distribuicao/placeholder-4.png",
-      s2: "/Images/foto-paineis-solares.jpg",
+      destaque: "/Images/foto-paineis-solares.jpg",
+      s1: "/Images/paineis-solares4.jpg",
+      s2: "/Images/paineis-solares3.jpg",
     },
   },
   {
@@ -123,9 +123,9 @@ const cases = [
       "Vistoria e homologação junto à Energisa",
     ],
     fotos: {
-      destaque: "/Images/geracao-distribuicao/placeholder-5.png",
-      s1: "/Images/geracao-distribuicao/placeholder-6.png",
-      s2: "/Images/paineis-solares3.jpg",
+      destaque: "/Images/paineis-solares3.jpg",
+      s1: "/Images/paineis-solares2.jpg",
+      s2: "/Images/foto-paineis-solares.jpg",
     },
   },
 ];

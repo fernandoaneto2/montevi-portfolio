@@ -94,7 +94,7 @@ export default function Team() {
             aria-hidden="true"
             style={{ position: "relative" }}
           ></div>
-          <h3>A definir</h3>
+          <h3>Francisco Alves de Souza Neto</h3>
           <p className="member-role">Diretor Comercial</p>
           <p className="member-crea"></p>
           <p className="member-description">

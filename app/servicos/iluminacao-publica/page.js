@@ -91,9 +91,9 @@ const cases = [
       "Documentação técnica completa com ART",
     ],
     fotos: {
-      destaque: "/Images/projeto-sistema-de-iluminacao.png",
-      s1: "/Images/projeto-luna.png",
-      s2: "/Images/projeto-poinsp.png",
+      destaque: "/Images/iluminacao-publica1.jpeg",
+      s1: "/Images/iluminacao-publica2.jpeg",
+      s2: "/Images/iluminacao-publica5.png",
     },
   },
   {
@@ -107,9 +107,9 @@ const cases = [
       "Relatório de redução de consumo e documentação ART",
     ],
     fotos: {
-      destaque: "/Images/projetos-complementares2.jpg",
-      s1: "/Images/projeto-sistema-de-iluminacao.png",
-      s2: "/Images/engenharia-civil2.jpg",
+      destaque: "/Images/iluminacao-publica6.png",
+      s1: "/Images/iluminacao-publica7.png",
+      s2: "/Images/iluminacao-publica4.jpeg",
     },
   },
   {
@@ -123,9 +123,9 @@ const cases = [
       "Aprovação e comissionamento junto à Energisa",
     ],
     fotos: {
-      destaque: "/Images/projeto-luna.png",
-      s1: "/Images/projeto-poinsp.png",
-      s2: "/Images/projeto-agrupamento.png",
+      destaque: "/Images/iluminacao-publica2.jpeg",
+      s1: "/Images/iluminacao-publica5.png",
+      s2: "/Images/iluminacao-publica7.png",
     },
   },
 ];
@@ -139,7 +139,7 @@ export default function IluminacaoPublicaPage() {
         <section className="servico-hero">
           <div className="servico-hero__bg">
             <Image
-              src="/Images/projeto-sistema-de-iluminacao.png"
+              src="/Images/iluminacao-publica4.jpeg"
               alt=""
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}

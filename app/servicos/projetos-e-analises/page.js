@@ -91,9 +91,9 @@ const cases = [
       "ART de projeto e submissão à Energisa",
     ],
     fotos: {
-      destaque: "/Images/projeto-pci.png",
-      s1: "/Images/projeto-eletrico.png",
-      s2: "/Images/projeto-eletrico-vias-do-atlantico.png",
+      destaque: "/Images/subestacao-abrigada.jpeg",
+      s1: "/Images/subestacao-abrigada2.jpeg",
+      s2: "/Images/subestacao-abrigada3.jpeg",
     },
   },
   {
@@ -107,9 +107,9 @@ const cases = [
       "Memorial descritivo e ART de projeto",
     ],
     fotos: {
-      destaque: "/Images/projeto-predial-residencial.png",
-      s1: "/Images/projeto-spda.png",
-      s2: "/Images/projeto-luna.png",
+      destaque: "/Images/subestacao-aerea1.jpeg",
+      s1: "/Images/engenharia-civil.jpg",
+      s2: "/Images/subestacao-abrigada3.jpeg",
     },
   },
   {
@@ -123,9 +123,9 @@ const cases = [
       "ART de análise e laudo técnico entregue ao cliente",
     ],
     fotos: {
-      destaque: "/Images/projeto-spda.png",
-      s1: "/Images/projeto-pci.png",
-      s2: "/Images/projeto-predial-residencial.png",
+      destaque: "/Images/subestacao-abrigada2.jpeg",
+      s1: "/Images/subestacao-aerea1.jpeg",
+      s2: "/Images/engenharia-civil.jpg",
     },
   },
 ];
@@ -139,7 +139,7 @@ export default function ProjetosEAnalisesPage() {
         <section className="servico-hero">
           <div className="servico-hero__bg">
             <Image
-              src="/Images/projeto-eletrico.png"
+              src="/Images/engenharia-civil2.jpg"
               alt=""
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}

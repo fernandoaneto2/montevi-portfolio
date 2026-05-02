@@ -124,7 +124,7 @@ const cases = [
     ],
     fotos: {
       destaque: "/Images/subestacao-aerea1.jpeg",
-      s1: "/Images/subestacao-abrigada2.jpeg",
+      s1: "/Images/subestacao-predial.png",
       s2: "/Images/subestacao-abrigada3.jpeg",
     },
   },

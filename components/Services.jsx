@@ -58,7 +58,7 @@ const servicos = [
     seguranca:
       'Equipe certificada NR-10 e NR-35, com APR (Análise Preliminar de Risco) em todas as frentes de obra.',
     // TODO: substituir por foto real de rede de distribuição aérea (poste/transformador)
-    imagem: '/Images/engenharia-civil.jpg',
+    imagem: '/Images/subestacao-aerea1.jpeg',
     alt: 'Rede de distribuição elétrica aérea em poste',
     href: '/servicos/redes-de-distribuicao',
     waText: 'Olá! Tenho interesse no serviço de Redes de Distribuição.',
@@ -78,8 +78,8 @@ const servicos = [
     normas: ['NBR 5101', 'NBR 5410', 'NR-10', 'NR-35'],
     seguranca:
       'Trabalho em altura com NR-35, sinalização viária e isolamento de área conforme normas de tráfego.',
-    imagem: '/Images/projeto-sistema-de-iluminacao.png',
-    alt: 'Projeto de sistema de iluminação pública com luminárias LED',
+    imagem: '/Images/iluminacao-publica4.jpeg',
+    alt: 'Execução de rede de iluminação pública com luminárias LED',
     href: '/servicos/iluminacao-publica',
     waText: 'Olá! Tenho interesse no serviço de Iluminação Pública.',
     priority: false,
@@ -98,8 +98,8 @@ const servicos = [
     normas: ['NBR 5410', 'NBR 14039', 'NBR 5419', 'NDU 013', 'NDU 015'],
     seguranca:
       'Todo projeto entregue com ART do CREA — segurança jurídica e técnica do início ao fim.',
-    imagem: '/Images/projeto-eletrico.png',
-    alt: 'Diagrama unifilar de projeto elétrico em desenvolvimento',
+    imagem: '/Images/engenharia-civil2.jpg',
+    alt: 'Execução de obra elétrica com responsabilidade técnica',
     href: '/servicos/projetos-e-analises',
     waText: 'Olá! Tenho interesse no serviço de Projetos e Análises.',
     priority: false,

@@ -91,9 +91,9 @@ const cases = [
       "Aprovação e comissionamento junto à concessionária",
     ],
     fotos: {
-      destaque: "/Images/projeto-agrupamento.png",
-      s1: "/Images/projeto-agrupamento2.png",
-      s2: "/Images/projeto-der.png",
+      destaque: "/Images/subestacao-aerea1.jpeg",
+      s1: "/Images/engenharia-civil.jpg",
+      s2: "/Images/subestacao-abrigada.jpeg",
     },
   },
   {
@@ -107,9 +107,9 @@ const cases = [
       "Aterramento conforme NBR 5419 e comissionamento",
     ],
     fotos: {
-      destaque: "/Images/projeto-der.png",
-      s1: "/Images/engenharia-civil.jpg",
-      s2: "/Images/projeto-poinsp.png",
+      destaque: "/Images/subestacao-abrigada2.jpeg",
+      s1: "/Images/subestacao-abrigada3.jpeg",
+      s2: "/Images/subestacao-aerea1.jpeg",
     },
   },
   {
@@ -124,8 +124,8 @@ const cases = [
     ],
     fotos: {
       destaque: "/Images/engenharia-civil.jpg",
-      s1: "/Images/projeto-agrupamento2.png",
-      s2: "/Images/projetos-complementares2.jpg",
+      s1: "/Images/subestacao-abrigada.jpeg",
+      s2: "/Images/engenharia-civil2.jpg",
     },
   },
 ];
@@ -139,7 +139,7 @@ export default function RedesDeDistribuicaoPage() {
         <section className="servico-hero">
           <div className="servico-hero__bg">
             <Image
-              src="/Images/projeto-agrupamento.png"
+              src="/Images/engenharia-civil2.jpg"
               alt=""
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}
