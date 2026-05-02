@@ -207,10 +207,20 @@ a:hover {
 
 .hero-content {
   z-index: 10;
+  position: relative;
   display: flex;
   flex-direction: column;
-  /* padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2.5rem); */
-  gap: 5px;
+  gap: 0;
+}
+
+.hero-eyebrow {
+  font-size: clamp(0.68rem, 1.2vw, 0.78rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  width: auto;
 }
 
 .hero-location {
@@ -232,6 +242,60 @@ a:hover {
   margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
   max-width: 500px;
   line-height: 1.8;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: clamp(2rem, 3vw, 2.5rem);
+  width: auto;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.5rem;
+  width: auto;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+  position: relative;
+  padding: 0 1rem;
+  width: auto;
+}
+
+.hero-stat:first-child {
+  padding-left: 0;
+}
+
+.hero-stat__sep {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: var(--border-light);
+}
+
+.hero-stat__valor {
+  font-size: clamp(0.78rem, 1.2vw, 0.88rem);
+  font-weight: 700;
+  color: var(--primary-dark);
+  white-space: nowrap;
+  width: auto;
+}
+
+.hero-stat__label {
+  font-size: clamp(0.68rem, 1vw, 0.75rem);
+  color: var(--text-light);
+  width: auto;
 }
 
 .hero-image {
@@ -731,6 +795,14 @@ a:hover {
   border: 3px solid var(--primary-light);
 }
 
+.member-avatar--placeholder::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230a2463' opacity='0.35'%3E%3Cpath d='M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
 .team-member h3 {
   color: var(--primary-dark);
   margin-bottom: clamp(0.25rem, 0.5vw, 0.5rem);
@@ -933,6 +1005,111 @@ a:hover {
   .hero-image {
     order: -1;
   }
+}
+
+/* ── Hero mobile: overlay sobre foto ── */
+@media (max-width: 767px) {
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100svh;
+    min-height: 100vh;
+    padding: 5rem 1.25rem 2.5rem;
+    background-image: url('/Images/paineis-solares4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      170deg,
+      rgba(10, 36, 99, 0.78) 0%,
+      rgba(10, 36, 99, 0.88) 100%
+    );
+    z-index: 0;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    gap: 0;
+  }
+
+  .hero-eyebrow {
+    color: var(--accent-light);
+  }
+
+  .hero-title {
+    color: var(--white);
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .hero-title .highlight {
+    color: var(--accent-light);
+  }
+
+  .hero-description {
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 100%;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .hero-ctas .cta-button {
+    max-width: 100%;
+    background: var(--white);
+    color: var(--primary-dark);
+    border-color: var(--white);
+  }
+
+  .hero-ctas .cta-button:hover {
+    background: var(--accent-light);
+    border-color: var(--accent-light);
+    color: var(--primary-dark);
+  }
+
+  .hero-ctas .cta-button-contact {
+    max-width: 100%;
+    display: flex;
+    width: 100%;
+  }
+
+  .hero-stats {
+    border-top-color: rgba(255, 255, 255, 0.2);
+    padding-top: 1.25rem;
+  }
+
+  .hero-stat__sep {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .hero-stat__valor {
+    color: var(--accent-light);
+    font-size: clamp(0.72rem, 2.8vw, 0.82rem);
+    white-space: normal;
+  }
+
+  .hero-stat__label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(0.62rem, 2.4vw, 0.7rem);
+  }
+}
+
+@media (max-width: 1024px) {
 
   .about {
     grid-template-columns: 1fr;
@@ -1561,6 +1738,7 @@ body {
   color: var(--primary-dark);
   margin: 0;
   font-weight: 700;
+  text-align: center;
 }
 
 .pilar-description {
@@ -2697,6 +2875,7 @@ body {
   color: var(--primary-light);
   margin: 0;
   width: auto;
+  text-align: center;
 }
 
 .svc-card__titulo {
@@ -2705,6 +2884,7 @@ body {
   color: var(--primary-dark);
   margin: 0;
   line-height: 1.25;
+  text-align: center;
 }
 
 .svc-card__descricao {

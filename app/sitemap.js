@@ -2,7 +2,7 @@ export const dynamic = 'force-static'
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  'https://montevi-portfolio-git-main-fernandoaneto2s-projects.vercel.app'
+  'https://www.monteviengenharia.com.br'
 
 const servicoRoutes = [
   '/servicos/subestacoes-e-geradores',

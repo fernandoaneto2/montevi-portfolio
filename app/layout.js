@@ -3,7 +3,7 @@ import CookieBanner from "@/components/CookieBanner";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://montevi-portfolio-git-main-fernandoaneto2s-projects.vercel.app";
+  "https://www.monteviengenharia.com.br";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

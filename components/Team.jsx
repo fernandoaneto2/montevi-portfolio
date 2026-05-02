@@ -66,10 +66,20 @@ export default function Team() {
           <h3>Vitor Torreão Alves De Souza</h3>
           <p className="member-role">Engenheiro Eletricista</p>
           <p className="member-crea"></p>
-          <p></p>
           <p className="member-description">
             +5 anos de experiência em Engenharia Elétrica, estudo técnico, gestão de projetos e
             fiscalização/execução de obras públicas e privadas.
+          </p>
+        </div>
+
+        <div className="team-member">
+          <div className="member-avatar member-avatar--placeholder" aria-hidden="true" style={{ position: 'relative' }}>
+          </div>
+          <h3>A definir</h3>
+          <p className="member-role">Diretor Comercial</p>
+          <p className="member-crea"></p>
+          <p className="member-description">
+            Responsável pelo desenvolvimento comercial e relacionamento estratégico com clientes e parceiros da Montevi Engenharia.
           </p>
         </div>
       </div>

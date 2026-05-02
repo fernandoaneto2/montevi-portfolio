@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://montevi-portfolio-git-main-fernandoaneto2s-projects.vercel.app/sitemap.xml
+Sitemap: https://www.monteviengenharia.com.br/sitemap.xml
