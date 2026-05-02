@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { useEffect } from 'react'
-import Image from 'next/image'
+import { useEffect } from "react";
+import Image from "next/image";
 
 export default function Team() {
   useEffect(() => {
@@ -9,38 +9,49 @@ export default function Team() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = '1'
-            entry.target.style.transform = 'translateY(0)'
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
           }
-        })
+        });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    )
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+    );
 
-    const members = document.querySelectorAll('.team-member')
+    const members = document.querySelectorAll(".team-member");
     members.forEach((el) => {
-      el.style.opacity = '0'
-      el.style.transform = 'translateY(20px)'
-      el.style.transition = 'all 0.6s ease-out'
-      observer.observe(el)
-    })
+      el.style.opacity = "0";
+      el.style.transform = "translateY(20px)";
+      el.style.transition = "all 0.6s ease-out";
+      observer.observe(el);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section id="team" className="team" role="region" aria-label="Corpo Técnico">
+    <section
+      id="team"
+      className="team"
+      role="region"
+      aria-label="Corpo Técnico"
+    >
       <h2 className="section-title">Corpo Técnico</h2>
-      <p className="section-subtitle">Profissionais qualificados e experientes</p>
+      <p className="section-subtitle">
+        Profissionais qualificados e experientes
+      </p>
 
       <div className="team-container">
         <div className="team-member">
-          <div className="member-avatar" aria-hidden="true" style={{ position: 'relative' }}>
+          <div
+            className="member-avatar"
+            aria-hidden="true"
+            style={{ position: "relative" }}
+          >
             <Image
               src="/Images/foto-alves.png"
               alt="Foto Perfil"
               fill
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
               sizes="120px"
             />
           </div>
@@ -54,35 +65,44 @@ export default function Team() {
         </div>
 
         <div className="team-member">
-          <div className="member-avatar" aria-hidden="true" style={{ position: 'relative' }}>
+          <div
+            className="member-avatar"
+            aria-hidden="true"
+            style={{ position: "relative" }}
+          >
             <Image
               src="/Images/foto-torreao.png"
               alt="Foto Perfil"
               fill
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
               sizes="120px"
             />
           </div>
           <h3>Vitor Torreão Alves De Souza</h3>
-          <p className="member-role">Engenheiro Eletricista</p>
+          <p className="member-role">Comercial técnico</p>
           <p className="member-crea"></p>
           <p className="member-description">
-            +5 anos de experiência em Engenharia Elétrica, estudo técnico, gestão de projetos e
-            fiscalização/execução de obras públicas e privadas.
+            +5 anos de experiência em Engenharia Elétrica, estudo técnico,
+            gestão de projetos e fiscalização/execução de obras públicas e
+            privadas.
           </p>
         </div>
 
         <div className="team-member">
-          <div className="member-avatar member-avatar--placeholder" aria-hidden="true" style={{ position: 'relative' }}>
-          </div>
+          <div
+            className="member-avatar member-avatar--placeholder"
+            aria-hidden="true"
+            style={{ position: "relative" }}
+          ></div>
           <h3>A definir</h3>
           <p className="member-role">Diretor Comercial</p>
           <p className="member-crea"></p>
           <p className="member-description">
-            Responsável pelo desenvolvimento comercial e relacionamento estratégico com clientes e parceiros da Montevi Engenharia.
+            Responsável pelo desenvolvimento comercial e relacionamento
+            estratégico com clientes e parceiros da Montevi Engenharia.
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
