@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import iconeIluminacao from "@/Images/iluminacao1.png";
 
 export const metadata = {
   title: "Iluminação Pública | Montevi Engenharia — João Pessoa/PB",
@@ -89,6 +90,8 @@ const galeriaFotos = [
   { src: "/Images/iluminacao-publica5.png", alt: "" },
   { src: "/Images/iluminacao-publica6.png", alt: "" },
   { src: "/Images/iluminacao-publica7.png", alt: "" },
+  { src: "/Images/iluminacao1.png", alt: "" },
+  { src: "/Images/iluminacao2.png", alt: "" },
 ];
 
 export default function IluminacaoPublicaPage() {
@@ -100,7 +103,7 @@ export default function IluminacaoPublicaPage() {
         <section className="servico-hero">
           <div className="servico-hero__bg">
             <Image
-              src="/Images/iluminacao-publica4.jpeg"
+              src={iconeIluminacao}
               alt=""
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}
