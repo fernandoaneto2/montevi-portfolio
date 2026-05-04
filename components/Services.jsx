@@ -44,6 +44,66 @@ const servicos = [
     priority: true,
   },
   {
+    tag: 'Energia Solar',
+    titulo: 'Geração Fotovoltaica',
+    descricao:
+      'Soluções completas em energia solar fotovoltaica — On Grid, Off Grid, Híbrido e Bomba Solar — do dimensionamento à instalação e homologação junto à concessionária.',
+    bullets: [
+      'On Grid, On Grid com Micro Inversor e Off Grid',
+      'Sistemas Híbridos e Bomba Solar',
+      'Dimensionamento, projeto elétrico e ART de instalação',
+      'Homologação junto à concessionária e troca do medidor',
+    ],
+    normas: ['NBR 16690', 'ABNT NBR 16274', 'REN 1.000/2021', 'NR-10'],
+    seguranca:
+      'Instalação com equipe certificada NR-10, proteção anti-ilhamento e aterramento conforme normas ABNT.',
+    imagem: '/Images/paineis-solares2.jpg',
+    alt: 'Sistema de geração fotovoltaica instalado em telhado',
+    href: '/servicos/geracao-fotovoltaica',
+    waText: 'Olá! Tenho interesse no serviço de Geração Fotovoltaica.',
+    priority: false,
+  },
+  {
+    tag: 'Escritório Técnico BIM',
+    titulo: 'Projetos de Engenharia',
+    descricao:
+      'Todos os projetos são desenvolvidos em BIM, com levantamento automático de materiais federados, assegurando fidelidade ao projeto, eficiência construtiva e economia.',
+    bullets: [
+      'Elétricos: BT/MT, medição agrupada, cabeamento e SPDA',
+      'Complementares: PCI, hidrossanitário, gás e climatização',
+      'ART (CREA), memoriais, compatibilização e As Built',
+      'Análise e revisão técnica de projetos de terceiros',
+    ],
+    normas: ['NBR 5410', 'NBR 14039', 'NBR 5419', 'CREA/ART'],
+    seguranca:
+      'Todo projeto entregue com ART do CREA e memorial descritivo completo — responsabilidade técnica garantida.',
+    imagem: '/Images/engenharia-civil.jpg',
+    alt: 'Projeto de engenharia elétrica desenvolvido em BIM',
+    href: '/servicos/projetos-de-engenharia',
+    waText: 'Olá! Tenho interesse no serviço de Projetos de Engenharia.',
+    priority: false,
+  },
+  {
+    tag: 'Mobilidade Elétrica',
+    titulo: 'Carregadores Elétricos (EV)',
+    descricao:
+      'Projetos e especificações para infraestrutura de carregamento de veículos elétricos, atendendo normas técnicas, capacidade elétrica instalada e expansão futura.',
+    bullets: [
+      'Carregadores AC e DC — residencial, comercial e industrial',
+      'Dimensionamento elétrico e adequações da instalação',
+      'Proteções: disjuntores, DPS e aterramento',
+      'Projeto com previsão de expansão futura da frota',
+    ],
+    normas: ['NBR 5410', 'IEC 61851', 'NR-10', 'ABNT NBR 16415'],
+    seguranca:
+      'Infraestrutura projetada com proteção contra surtos (DPS) e aterramento conforme normas de segurança elétrica.',
+    imagem: '/Images/foto-carregadore-eletricos.png',
+    alt: 'Carregadores de veículos elétricos instalados em infraestrutura',
+    href: '/servicos/carregadores-eletricos',
+    waText: 'Olá! Tenho interesse no serviço de Carregadores Elétricos.',
+    priority: false,
+  },
+  {
     tag: 'Engenharia Elétrica',
     titulo: 'Redes de Distribuição',
     descricao:
@@ -57,7 +117,6 @@ const servicos = [
     normas: ['NBR 5410', 'NBR 14039', 'NR-10', 'NDU 001/Energisa'],
     seguranca:
       'Equipe certificada NR-10 e NR-35, com APR (Análise Preliminar de Risco) em todas as frentes de obra.',
-    // TODO: substituir por foto real de rede de distribuição aérea (poste/transformador)
     imagem: '/Images/subestacao-aerea1.jpeg',
     alt: 'Rede de distribuição elétrica aérea em poste',
     href: '/servicos/redes-de-distribuicao',
@@ -82,46 +141,6 @@ const servicos = [
     alt: 'Execução de rede de iluminação pública com luminárias LED',
     href: '/servicos/iluminacao-publica',
     waText: 'Olá! Tenho interesse no serviço de Iluminação Pública.',
-    priority: false,
-  },
-  {
-    tag: 'Escritório Técnico',
-    titulo: 'Projetos e Análises',
-    descricao:
-      'Hub completo de projetos elétricos: elaboramos, analisamos e aprovamos projetos junto à concessionária, com responsabilidade técnica em todas as etapas.',
-    bullets: [
-      'Projetos elétricos prediais, industriais e de redes',
-      'Análise técnica e revisão de projetos de terceiros',
-      'Submissão e acompanhamento via APR Web da Energisa',
-      'Emissão de ART e memoriais descritivos completos',
-    ],
-    normas: ['NBR 5410', 'NBR 14039', 'NBR 5419', 'NDU 013', 'NDU 015'],
-    seguranca:
-      'Todo projeto entregue com ART do CREA — segurança jurídica e técnica do início ao fim.',
-    imagem: '/Images/engenharia-civil2.jpg',
-    alt: 'Execução de obra elétrica com responsabilidade técnica',
-    href: '/servicos/projetos-e-analises',
-    waText: 'Olá! Tenho interesse no serviço de Projetos e Análises.',
-    priority: false,
-  },
-  {
-    tag: 'Geração Distribuída',
-    titulo: 'Geração Distribuída (GD)',
-    descricao:
-      'Projeto, viabilidade e homologação de sistemas de microgeração e minigeração distribuída, com conexão garantida junto à Energisa.',
-    bullets: [
-      'Estudo de viabilidade técnica e análise da rede',
-      'Projeto elétrico completo (memorial, unifilar, folha de dados)',
-      'Submissão e acompanhamento via APR Web até a homologação',
-      'Adequação do padrão de entrada e troca do medidor',
-    ],
-    normas: ['NDU 013', 'NDU 015', 'NBR 16690', 'NBR 5410', 'REN 1.000/2021'],
-    seguranca:
-      'Projetos com proteção anti-ilhamento e desligamento automático conforme NDU Energisa.',
-    imagem: '/Images/paineis-solares4.jpg',
-    alt: 'Painéis solares fotovoltaicos de sistema de geração distribuída',
-    href: '/servicos/geracao-distribuida',
-    waText: 'Olá! Tenho interesse no serviço de Geração Distribuída.',
     priority: false,
   },
 ]
@@ -195,7 +214,7 @@ export default function Services() {
         Engenharia elétrica com segurança normatizada
       </h2>
       <p className="section-subtitle">
-        Cinco frentes especializadas, cada uma com domínio normativo completo e
+        Seis frentes especializadas, cada uma com domínio normativo completo e
         equipe certificada para garantir execução segura e em conformidade.
       </p>
 

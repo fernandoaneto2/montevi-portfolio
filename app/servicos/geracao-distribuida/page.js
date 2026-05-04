@@ -244,13 +244,28 @@ export default function GeracaoDistribuidaPage() {
               const galeria = (
                 <div className="case__galeria">
                   <div className="case__foto case__foto--destaque">
-                    <Image src={caso.fotos.destaque} alt={caso.titulo} fill style={{ objectFit: "cover" }} />
+                    <Image
+                      src={caso.fotos.destaque}
+                      alt={caso.titulo}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
                   </div>
                   <div className="case__foto">
-                    <Image src={caso.fotos.s1} alt="" fill style={{ objectFit: "cover" }} />
+                    <Image
+                      src={caso.fotos.s1}
+                      alt=""
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
                   </div>
                   <div className="case__foto">
-                    <Image src={caso.fotos.s2} alt="" fill style={{ objectFit: "cover" }} />
+                    <Image
+                      src={caso.fotos.s2}
+                      alt=""
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
                   </div>
                 </div>
               );
@@ -337,11 +352,11 @@ export default function GeracaoDistribuidaPage() {
           </div>
         </section>
 
-        <div style={{ textAlign: "center", padding: "2rem 1rem 3rem" }}>
+        {/* <div style={{ textAlign: "center", padding: "2rem 1rem 3rem" }}>
           <Link href="/#services" className="voltar-link">
             ← Voltar aos Serviços
           </Link>
-        </div>
+        </div> */}
       </main>
       <Footer />
     </>

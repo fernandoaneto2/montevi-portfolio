@@ -6,10 +6,11 @@ const SITE_URL =
 
 const servicoRoutes = [
   '/servicos/subestacoes-e-geradores',
+  '/servicos/geracao-fotovoltaica',
+  '/servicos/projetos-de-engenharia',
+  '/servicos/carregadores-eletricos',
   '/servicos/redes-de-distribuicao',
   '/servicos/iluminacao-publica',
-  '/servicos/projetos-e-analises',
-  '/servicos/geracao-distribuida',
 ]
 
 export default function sitemap() {

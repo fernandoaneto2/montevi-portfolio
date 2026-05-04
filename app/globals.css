@@ -2747,6 +2747,88 @@ body {
   text-align: center;
 }
 
+/* ── Galeria de Execução — substitui portfolio-cases nas páginas de serviço ── */
+.exec-gallery {
+  background: var(--accent-lighter);
+}
+
+.exec-gallery__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.exec-gallery__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.exec-gallery__banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 21/9;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  background: var(--border-light);
+}
+
+.exec-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.exec-gallery__grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.exec-gallery__foto {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  background: var(--border-light);
+}
+
+.exec-gallery__foto img {
+  transition: transform 0.4s ease;
+}
+
+.exec-gallery__foto:hover img {
+  transform: scale(1.05);
+}
+
+.exec-gallery__legenda {
+  text-align: center;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  font-size: clamp(0.88rem, 1.2vw, 0.95rem);
+  color: var(--text-light);
+  font-style: italic;
+}
+
+@media (max-width: 960px) {
+  .exec-gallery__banner {
+    aspect-ratio: 16/9;
+  }
+
+  .exec-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exec-gallery__grid--3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .exec-gallery__foto {
+    aspect-ratio: 1;
+  }
+}
+
 @media (max-width: 960px) {
   .company-section__inner {
     grid-template-columns: 1fr;
@@ -2893,6 +2975,7 @@ body {
   line-height: 1.65;
   margin: 0;
   width: auto;
+  text-align: justify;
 }
 
 .svc-card__bullets {

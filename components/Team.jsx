@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import fotoChicao from "../Images/foto-chicao-profissional.jpeg";
 
 export default function Team() {
   useEffect(() => {
@@ -90,10 +91,18 @@ export default function Team() {
 
         <div className="team-member">
           <div
-            className="member-avatar member-avatar--placeholder"
+            className="member-avatar"
             aria-hidden="true"
             style={{ position: "relative" }}
-          ></div>
+          >
+            <Image
+              src={fotoChicao}
+              alt="Foto Perfil"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center 20%" }}
+              sizes="120px"
+            />
+          </div>
           <h3>Francisco Alves de Souza Neto</h3>
           <p className="member-role">Diretor Comercial</p>
           <p className="member-crea"></p>

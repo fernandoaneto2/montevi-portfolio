@@ -12,10 +12,11 @@ const servicoLinks = [
     href: "/servicos/subestacoes-e-geradores",
     label: "Subestações e Geradores",
   },
+  { href: "/servicos/geracao-fotovoltaica", label: "Geração Fotovoltaica" },
+  { href: "/servicos/projetos-de-engenharia", label: "Projetos de Engenharia" },
+  { href: "/servicos/carregadores-eletricos", label: "Carregadores Elétricos" },
   { href: "/servicos/redes-de-distribuicao", label: "Redes de Distribuição" },
   { href: "/servicos/iluminacao-publica", label: "Iluminação Pública" },
-  { href: "/servicos/projetos-e-analises", label: "Projetos e Análises" },
-  { href: "/servicos/geracao-distribuida", label: "Geração Distribuída" },
 ];
 
 export default function Footer() {
@@ -92,7 +93,7 @@ export default function Footer() {
           <address className="footer-address">
             <p>Montevi Engenharia LTDA</p>
             <p>CNPJ: 54.308.461/0001-55</p>
-            <p>Alphaville — SP</p>
+            <p>João Pessoa - PB</p>
             <p>Atuação: Todo Brasil</p>
           </address>
           <a

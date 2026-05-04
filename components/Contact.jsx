@@ -99,7 +99,7 @@ export default function Contact() {
           </div>
           <div className="contact-item">
             <h3>Localização</h3>
-            <p>Alphaville - SP</p>
+            <p>João Pessoa - PB</p>
           </div>
         </div>
 

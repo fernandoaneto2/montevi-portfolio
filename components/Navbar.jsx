@@ -7,10 +7,11 @@ import { usePathname } from 'next/navigation'
 
 const servicoLinks = [
   { href: '/servicos/subestacoes-e-geradores', label: 'Subestações e Geradores' },
+  { href: '/servicos/geracao-fotovoltaica', label: 'Geração Fotovoltaica' },
+  { href: '/servicos/projetos-de-engenharia', label: 'Projetos de Engenharia' },
+  { href: '/servicos/carregadores-eletricos', label: 'Carregadores Elétricos' },
   { href: '/servicos/redes-de-distribuicao', label: 'Redes de Distribuição' },
   { href: '/servicos/iluminacao-publica', label: 'Iluminação Pública' },
-  { href: '/servicos/projetos-e-analises', label: 'Projetos e Análises' },
-  { href: '/servicos/geracao-distribuida', label: 'Geração Distribuída (GD)' },
 ]
 
 // Ordem espelha a sequência das seções na home page

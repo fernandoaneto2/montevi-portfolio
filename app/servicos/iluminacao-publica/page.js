@@ -79,55 +79,16 @@ const timeline = [
   },
 ];
 
-const cases = [
+const galeriaFotos = [
   {
-    tag: "Sistema completo de IP",
-    titulo: "Iluminação Pública — Rede Completa",
-    localizacao: "João Pessoa — PB",
-    escopo: [
-      "Projeto completo de rede de iluminação pública",
-      "Instalação de transformador, posteamento e cabeamento",
-      "Comissionamento e energização junto à Energisa",
-      "Documentação técnica completa com ART",
-    ],
-    fotos: {
-      destaque: "/Images/iluminacao-publica1.jpeg",
-      s1: "/Images/iluminacao-publica2.jpeg",
-      s2: "/Images/iluminacao-publica5.png",
-    },
+    src: "/Images/iluminacao-publica1.jpeg",
+    alt: "Execução de rede de iluminação pública — Montevi Engenharia",
   },
-  {
-    tag: "Modernização LED",
-    titulo: "Eficientização com Luminárias LED",
-    localizacao: null,
-    escopo: [
-      "Diagnóstico energético do sistema existente",
-      "Projeto de substituição com equivalência fotométrica",
-      "Instalação de luminárias LED de alta eficiência",
-      "Relatório de redução de consumo e documentação ART",
-    ],
-    fotos: {
-      destaque: "/Images/iluminacao-publica6.png",
-      s1: "/Images/iluminacao-publica7.png",
-      s2: "/Images/iluminacao-publica4.jpeg",
-    },
-  },
-  {
-    tag: "Extensão de rede de IP",
-    titulo: "Extensão de Rede de Iluminação Pública",
-    localizacao: null,
-    escopo: [
-      "Projeto de extensão da rede de IP existente",
-      "Instalação de postes, braços e luminárias",
-      "Adequação da rede elétrica de alimentação",
-      "Aprovação e comissionamento junto à Energisa",
-    ],
-    fotos: {
-      destaque: "/Images/iluminacao-publica2.jpeg",
-      s1: "/Images/iluminacao-publica5.png",
-      s2: "/Images/iluminacao-publica7.png",
-    },
-  },
+  { src: "/Images/iluminacao-publica2.jpeg", alt: "" },
+  { src: "/Images/iluminacao-publica4.jpeg", alt: "" },
+  { src: "/Images/iluminacao-publica5.png", alt: "" },
+  { src: "/Images/iluminacao-publica6.png", alt: "" },
+  { src: "/Images/iluminacao-publica7.png", alt: "" },
 ];
 
 export default function IluminacaoPublicaPage() {
@@ -225,71 +186,37 @@ export default function IluminacaoPublicaPage() {
           </div>
         </section>
 
-        {/* ── 4. Casos de referência ── */}
-        <section
-          className="portfolio-cases servico-section"
-          style={{ background: "var(--accent-lighter)" }}
-        >
-          <div className="portfolio-cases__header">
-            <p className="service-category">PORTFÓLIO</p>
-            <h2 className="section-title">Casos de referência</h2>
-            <p className="section-subtitle">
-              Projetos representativos da nossa atuação em iluminação pública na
+        {/* ── 4. Galeria de execução ── */}
+        <section className="exec-gallery servico-section">
+          <div className="exec-gallery__inner">
+            <div className="exec-gallery__header">
+              <p className="service-category">PORTFÓLIO</p>
+              <h2 className="section-title">Execução em campo</h2>
+              <p className="section-subtitle">
+                Projetos de iluminação pública executados pela Montevi na
+                Paraíba.
+              </p>
+            </div>
+
+            <div className="exec-gallery__grid exec-gallery__grid--3col">
+              {galeriaFotos.map((foto) => (
+                <div className="exec-gallery__foto" key={foto.src}>
+                  <Image
+                    src={foto.src}
+                    alt={foto.alt}
+                    fill
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                  />
+                </div>
+              ))}
+            </div>
+
+            <p className="exec-gallery__legenda">
+              Além desses registros, contamos com um histórico de projetos de
+              iluminação pública elaborados e executados em municípios da
               Paraíba.
             </p>
           </div>
-
-          <div className="portfolio-cases__lista">
-            {cases.map((caso, i) => {
-              const isReverse = i % 2 === 1;
-              const galeria = (
-                <div className="case__galeria">
-                  <div className="case__foto case__foto--destaque">
-                    <Image src={caso.fotos.destaque} alt={caso.titulo} fill style={{ objectFit: "cover" }} />
-                  </div>
-                  <div className="case__foto">
-                    <Image src={caso.fotos.s1} alt="" fill style={{ objectFit: "cover" }} />
-                  </div>
-                  <div className="case__foto">
-                    <Image src={caso.fotos.s2} alt="" fill style={{ objectFit: "cover" }} />
-                  </div>
-                </div>
-              );
-              const conteudo = (
-                <div className="case__conteudo">
-                  <span className="case__tag">{caso.tag}</span>
-                  <h3 className="case__titulo">{caso.titulo}</h3>
-                  {caso.localizacao ? (
-                    <p className="case__local">{caso.localizacao}</p>
-                  ) : (
-                    <p className="case__local case__local--todo">
-                      Localização a confirmar
-                    </p>
-                  )}
-                  <p className="case__escopo-label">Escopo entregue</p>
-                  <ul className="case__lista">
-                    {caso.escopo.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              );
-              return (
-                <div
-                  className={`case${isReverse ? " case--reverse" : ""}`}
-                  key={caso.titulo}
-                >
-                  {isReverse ? conteudo : galeria}
-                  {isReverse ? galeria : conteudo}
-                </div>
-              );
-            })}
-          </div>
-
-          <p className="portfolio-cases__fechamento">
-            Além desses cases, contamos com um histórico de projetos de
-            iluminação pública elaborados e executados em municípios da Paraíba.
-          </p>
         </section>
 
         {/* ── 5. Como funciona o atendimento ── */}
@@ -338,11 +265,11 @@ export default function IluminacaoPublicaPage() {
           </div>
         </section>
 
-        <div style={{ textAlign: "center", padding: "2rem 1rem 3rem" }}>
+        {/* <div style={{ textAlign: "center", padding: "2rem 1rem 3rem" }}>
           <Link href="/#services" className="voltar-link">
             ← Voltar aos Serviços
           </Link>
-        </div>
+        </div> */}
       </main>
       <Footer />
     </>

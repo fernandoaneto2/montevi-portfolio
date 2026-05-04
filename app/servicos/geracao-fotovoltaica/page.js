@@ -4,49 +4,49 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Redes de Distribuição | Montevi Engenharia — João Pessoa/PB",
+  title: "Geração Fotovoltaica | Montevi Engenharia — João Pessoa/PB",
   description:
-    "Projeto e execução de redes de distribuição aérea e subterrânea em média e baixa tensão, com domínio total dos procedimentos da Energisa. NBR 5410 · NR-10 · NDU 001.",
+    "Soluções completas em energia solar fotovoltaica: On Grid, Off Grid, Híbrido e Bomba Solar. Projeto, instalação e homologação junto à concessionária. NBR 16690 · REN 1.000/2021.",
 };
 
 const frentes = [
   {
-    titulo: "Redes aéreas de distribuição",
+    titulo: "Sistemas On Grid e On Grid com Micro Inversor",
     descricao:
-      "Projeto e execução de redes aéreas de média e baixa tensão — do dimensionamento ao comissionamento, com aprovação junto à Energisa.",
+      "Sistemas conectados à rede elétrica — com inversores string ou micro inversores — para compensação de energia e redução da conta de luz.",
     lista: [
-      "Projeto de redes MT e BT para loteamentos e áreas industriais",
-      "Posteamento, cabeamento e instalação de transformadores",
-      "Instalação de dispositivos de proteção (religadores, fusíveis, chaves)",
-      "Extensão e adequação de redes existentes",
-      "Aterramento conforme NBR 5419",
-      "Comissionamento e energização junto à Energisa",
+      "Dimensionamento do sistema conforme consumo e área disponível",
+      "Projeto elétrico com diagrama unifilar e memorial descritivo",
+      "On Grid com inversor central (string) para grande geração",
+      "On Grid com micro inversores — maior eficiência por módulo",
+      "Homologação junto à concessionária e troca do medidor bidirecional",
+      "ART de projeto e instalação emitida pelo CREA",
     ],
   },
   {
-    titulo: "Redes subterrâneas",
+    titulo: "Sistemas Off Grid e Híbridos",
     descricao:
-      "Projeto e instalação de redes subterrâneas de baixa e média tensão para empreendimentos comerciais, condomínios e áreas industriais.",
+      "Soluções autônomas ou com backup de energia para locais sem acesso à rede elétrica ou que exigem continuidade de fornecimento.",
     lista: [
-      "Projeto com dimensionamento de cabos, dutos e câmaras",
-      "Instalação de cabos, eletrocalhas e câmaras de passagem",
-      "Sistemas de aterramento para redes subterrâneas",
-      "Integração com subestações e QGBT",
-      "Aprovação junto à Energisa e prefeitura quando aplicável",
-      "Documentação técnica completa com ART",
+      "Off Grid — sistema isolado com banco de baterias",
+      "Híbrido — sistema com rede e banco de baterias para backup",
+      "Dimensionamento do banco de baterias conforme autonomia desejada",
+      "Inversores híbridos com carregamento inteligente",
+      "Projeto completo com ART e memorial descritivo",
+      "Monitoramento remoto da geração e consumo",
     ],
   },
   {
-    titulo: "Aprovação e acompanhamento junto à Energisa",
+    titulo: "Bomba Solar",
     descricao:
-      "Submissão e gestão de projetos de rede no portal da Energisa — do protocolo ao aceite final, sem burocracia para o cliente.",
+      "Sistemas de bombeamento de água movidos a energia solar — ideais para aplicações rurais, irrigação e abastecimento em locais sem rede elétrica.",
     lista: [
-      "Elaboração e submissão de projetos via APR Web",
-      "Acompanhamento do fluxo de análise e aprovação da concessionária",
-      "Adequação de projetos conforme exigências técnicas da Energisa",
-      "Gestão de vistorias e inspeções em campo",
-      "Emissão de ART de projeto e execução",
-      "Acervo técnico completo entregue ao cliente",
+      "Dimensionamento do sistema de bombeamento solar",
+      "Seleção de bomba e inversor solar adequados à demanda hídrica",
+      "Projeto elétrico e hidráulico integrado",
+      "Instalação e comissionamento do sistema completo",
+      "Solução sem bateria — direto do sol para a bomba",
+      "ART de projeto e instalação entregue ao cliente",
     ],
   },
 ];
@@ -54,42 +54,34 @@ const frentes = [
 const timeline = [
   {
     num: "01",
-    titulo: "Levantamento técnico",
-    desc: "Visita ao local, levantamento topográfico e análise das condições da rede existente.",
+    titulo: "Estudo de viabilidade",
+    desc: "Análise do consumo energético, da área disponível e da incidência solar para dimensionamento correto do sistema fotovoltaico.",
   },
   {
     num: "02",
-    titulo: "Projeto de rede",
-    desc: "Elaboração do projeto elétrico completo com memorial descritivo, diagrama unifilar e lista de materiais.",
+    titulo: "Projeto elétrico completo",
+    desc: "Elaboração do memorial descritivo, diagrama unifilar, folha de dados dos inversores e demais documentos exigidos pela concessionária.",
   },
   {
     num: "03",
-    titulo: "Submissão à Energisa",
-    desc: "Protocolo do projeto via APR Web e acompanhamento da análise pela concessionária.",
+    titulo: "Emissão de ART e submissão",
+    desc: "Emissão da ART de projeto e instalação no CREA e protocolo do processo via APR Web / Agência Virtual da concessionária.",
   },
   {
     num: "04",
-    titulo: "Execução em campo",
-    desc: "Implantação da rede com equipe técnica, seguindo NR-10, NR-35 e os procedimentos da Energisa.",
+    titulo: "Instalação em campo",
+    desc: "Montagem das estruturas, instalação dos módulos, inversores e cabeamento por equipe técnica certificada NR-10 e NR-35.",
   },
   {
     num: "05",
-    titulo: "Comissionamento e energização",
-    desc: "Testes, energização acompanhada pela Energisa e entrega da documentação técnica completa.",
+    titulo: "Homologação e entrega",
+    desc: "Acompanhamento da vistoria da concessionária, troca do medidor bidirecional e entrega da documentação técnica completa.",
   },
 ];
 
-const galeriaFotos = [
-  {
-    src: "/Images/subestacao-aerea1.jpeg",
-    alt: "Rede de distribuição aérea executada pela Montevi Engenharia",
-  },
-  { src: "/Images/subestacao-abrigada.jpeg", alt: "" },
-  { src: "/Images/subestacao-abrigada2.jpeg", alt: "" },
-  { src: "/Images/subestacao-abrigada3.jpeg", alt: "" },
-];
+const galeriaFotos = [2, 3, 4, 5, 6, 7, 8, 9];
 
-export default function RedesDeDistribuicaoPage() {
+export default function GeracaoFotovoltaicaPage() {
   return (
     <>
       <Navbar />
@@ -98,7 +90,7 @@ export default function RedesDeDistribuicaoPage() {
         <section className="servico-hero">
           <div className="servico-hero__bg">
             <Image
-              src="/Images/subestacao-aerea1.jpeg"
+              src="/Images/paineis-solares4.jpg"
               alt=""
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}
@@ -111,18 +103,18 @@ export default function RedesDeDistribuicaoPage() {
               className="service-category"
               style={{ color: "var(--accent-light)", marginBottom: "0.5rem" }}
             >
-              REDES ELÉTRICAS
+              ENERGIA SOLAR
             </p>
             <h1
               className="section-title"
               style={{ color: "var(--white)", marginBottom: "1rem" }}
             >
-              Redes de Distribuição
+              Geração Fotovoltaica
             </h1>
             <p className="servico-hero__subtitle">
-              Projeto, execução e aprovação de redes aéreas e subterrâneas de
-              distribuição de energia — com domínio total dos processos da
-              Energisa e responsabilidade técnica (ART) em todas as etapas.
+              Soluções completas em energia solar — On Grid, Off Grid, Híbrido e
+              Bomba Solar — do dimensionamento à instalação e homologação, com
+              responsabilidade técnica (ART) em todas as etapas.
             </p>
           </div>
         </section>
@@ -131,26 +123,27 @@ export default function RedesDeDistribuicaoPage() {
         <section className="servico-sobre servico-section">
           <div className="servico-sobre__inner">
             <h2 className="section-title">
-              Do projeto à energização, sem burocracia para o cliente
+              Energia solar para cada necessidade
             </h2>
             <div className="servico-sobre__textos">
               <p className="about-text">
-                A Montevi projeta e executa redes de distribuição aéreas e
-                subterrâneas de média e baixa tensão, com aprovação integral
-                junto à Energisa. Conhecemos os fluxos da concessionária por
-                dentro — o que reduz prazos e elimina retrabalho.
+                A Montevi projeta e instala sistemas fotovoltaicos completos
+                para residências, comércios, indústrias e propriedades rurais.
+                Do estudo de viabilidade ao comissionamento final, entregamos
+                soluções On Grid, Off Grid, Híbridas e Bomba Solar com projeto
+                elétrico e ART do CREA.
               </p>
               <p className="about-text">
-                Cada projeto é elaborado com memorial descritivo, diagrama
-                unifilar e lista de materiais, submetido via APR Web e
-                acompanhado até o aceite final. Emitimos ART de projeto e de
-                execução em todas as etapas.
+                Nossos sistemas On Grid com micro inversores garantem maior
+                eficiência por módulo e monitoramento individual — ideal para
+                telhados com sombreamento parcial. Para quem precisa de
+                autonomia energética, os sistemas híbridos oferecem backup com
+                banco de baterias dimensionado conforme a demanda.
               </p>
               <p className="about-text">
-                Atendemos loteamentos, empreendimentos comerciais, indústrias e
-                o setor público em João Pessoa, Paraíba e demais estados do
-                Nordeste, com padrão de execução alinhado às normas ABNT e às
-                NDU da Energisa.
+                Conduzimos todo o processo de homologação junto à concessionária
+                — do protocolo na APR Web até a troca do medidor bidirecional —
+                sem burocracia para o cliente.
               </p>
             </div>
           </div>
@@ -165,8 +158,9 @@ export default function RedesDeDistribuicaoPage() {
           <div className="frentes__header">
             <h2 className="section-title">Frentes de atuação</h2>
             <p className="section-subtitle">
-              Da rede aérea à subterrânea — projeto, execução e aprovação sob a
-              mesma responsabilidade técnica.
+              On Grid, Off Grid, Híbrido ou Bomba Solar — solução completa com
+              projeto, instalação e homologação sob a mesma responsabilidade
+              técnica.
             </p>
           </div>
           <div className="frentes__grid">
@@ -191,26 +185,26 @@ export default function RedesDeDistribuicaoPage() {
               <p className="service-category">PORTFÓLIO</p>
               <h2 className="section-title">Execução em campo</h2>
               <p className="section-subtitle">
-                Registros de redes de distribuição executadas pela Montevi na
-                Paraíba.
+                Sistema fotovoltaico projetado e instalado pela Montevi — João
+                Pessoa, PB.
               </p>
             </div>
 
             <div className="exec-gallery__banner">
               <Image
-                src="/Images/subestacao-aerea1.jpeg"
-                alt="Rede de distribuição aérea — Montevi Engenharia"
+                src="/Images/geracao-fotovoltaica1.jpeg"
+                alt="Instalação de sistema fotovoltaico — Montevi Engenharia"
                 fill
                 style={{ objectFit: "cover", objectPosition: "center" }}
               />
             </div>
 
-            <div className="exec-gallery__grid exec-gallery__grid--3col">
-              {galeriaFotos.slice(1).map((foto) => (
-                <div className="exec-gallery__foto" key={foto.src}>
+            <div className="exec-gallery__grid">
+              {galeriaFotos.map((n) => (
+                <div className="exec-gallery__foto" key={n}>
                   <Image
-                    src={foto.src}
-                    alt={foto.alt}
+                    src={`/Images/geracao-fotovoltaica${n}.jpeg`}
+                    alt=""
                     fill
                     style={{ objectFit: "cover", objectPosition: "center" }}
                   />
@@ -219,9 +213,9 @@ export default function RedesDeDistribuicaoPage() {
             </div>
 
             <p className="exec-gallery__legenda">
-              Além desses registros, contamos com um histórico de projetos de
-              rede elaborados, aprovados e executados junto à Energisa na
-              Paraíba.
+              Além deste projeto, contamos com um histórico de sistemas
+              fotovoltaicos instalados em diferentes modalidades para clientes
+              residenciais, comerciais e rurais.
             </p>
           </div>
         </section>
@@ -231,7 +225,8 @@ export default function RedesDeDistribuicaoPage() {
           <div className="atendimento__inner">
             <h2 className="section-title">Como funciona o atendimento</h2>
             <p className="section-subtitle" style={{ marginBottom: "3rem" }}>
-              Do primeiro contato à entrega da documentação técnica.
+              Do estudo de viabilidade à homologação e entrega do sistema
+              gerando.
             </p>
             <ol className="atendimento__lista">
               {timeline.map((step) => (
@@ -253,7 +248,7 @@ export default function RedesDeDistribuicaoPage() {
         <section className="cta-final">
           <div className="cta-final__inner">
             <h2 className="cta-final__titulo">
-              Precisa de um projeto ou execução de rede elétrica?
+              Quer instalar energia solar fotovoltaica?
             </h2>
             <p className="cta-final__sub">
               Fale com a equipe da Montevi e receba um orçamento técnico
@@ -261,7 +256,7 @@ export default function RedesDeDistribuicaoPage() {
             </p>
             <div className="cta-final__btns">
               <a
-                href="https://wa.me/5511922763114?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Redes%20de%20Distribui%C3%A7%C3%A3o."
+                href="https://wa.me/5511922763114?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Gera%C3%A7%C3%A3o%20Fotovoltaica."
                 className="cta-button-contact"
                 target="_blank"
                 rel="noopener noreferrer"
