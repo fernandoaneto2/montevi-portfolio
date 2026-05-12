@@ -93,13 +93,13 @@ export default function Team() {
           <div
             className="member-avatar"
             aria-hidden="true"
-            style={{ position: "relative", background: "#fff" }}
+            style={{ position: "relative" }}
           >
             <Image
               src={fotoChicao}
               alt="Foto Perfil"
               fill
-              style={{ objectFit: "contain", objectPosition: "center" }}
+              style={{ objectFit: "cover", objectPosition: "center top" }}
               sizes="120px"
             />
           </div>
