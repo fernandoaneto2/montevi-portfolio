@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import iconeIluminacao from "@/Images/iluminacao1.png";
+import iconeIluminacao from "@/Images/iluminacao1.jpeg";
 
 export const metadata = {
   title: "Iluminação Pública | Montevi Engenharia — João Pessoa/PB",
@@ -90,8 +90,8 @@ const galeriaFotos = [
   { src: "/Images/iluminacao-publica5.png", alt: "" },
   { src: "/Images/iluminacao-publica6.png", alt: "" },
   { src: "/Images/iluminacao-publica7.png", alt: "" },
-  { src: "/Images/iluminacao1.png", alt: "" },
-  { src: "/Images/iluminacao2.png", alt: "" },
+  { src: "/Images/iluminacao1.jpeg", alt: "" },
+  { src: "/Images/iluminacao2.jpeg", alt: "" },
 ];
 
 export default function IluminacaoPublicaPage() {
