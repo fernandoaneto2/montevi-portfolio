@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import fotoChicao from "../Images/foto-chicao-profissional.jpeg";
+import fotoChicao from "../Images/icone-chicao.jpeg";
 
 export default function Team() {
   useEffect(() => {
@@ -93,13 +93,13 @@ export default function Team() {
           <div
             className="member-avatar"
             aria-hidden="true"
-            style={{ position: "relative" }}
+            style={{ position: "relative", background: "#fff" }}
           >
             <Image
               src={fotoChicao}
               alt="Foto Perfil"
               fill
-              style={{ objectFit: "cover", objectPosition: "center 20%" }}
+              style={{ objectFit: "contain", objectPosition: "center" }}
               sizes="120px"
             />
           </div>
