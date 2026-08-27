@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import fotoChicao from "../Images/icone-chicao.jpeg";
 
 export default function Team() {
   useEffect(() => {
@@ -48,29 +49,6 @@ export default function Team() {
             style={{ position: "relative" }}
           >
             <Image
-              src="/Images/foto-alves.png"
-              alt="Foto Perfil"
-              fill
-              style={{ objectFit: "cover" }}
-              sizes="120px"
-            />
-          </div>
-          <h3>Vitanael Alves de Aquino</h3>
-          <p className="member-role">Engenheiro Eletricista</p>
-          <p className="member-crea">CREA: 162020730-3 PB</p>
-          <p className="member-description">
-            +10 anos no setor de infraestrutura, +200 projetos elétricos e +25
-            MW em projetos de conexão.
-          </p>
-        </div>
-
-        <div className="team-member">
-          <div
-            className="member-avatar"
-            aria-hidden="true"
-            style={{ position: "relative" }}
-          >
-            <Image
               src="/Images/foto-torreao.png"
               alt="Foto Perfil"
               fill
@@ -88,6 +66,28 @@ export default function Team() {
           </p>
         </div>
 
+        <div className="team-member">
+          <div
+            className="member-avatar"
+            aria-hidden="true"
+            style={{ position: "relative" }}
+          >
+            <Image
+              src={fotoChicao}
+              alt="Foto Perfil"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              sizes="120px"
+            />
+          </div>
+          <h3>Francisco Alves de Souza Neto</h3>
+          <p className="member-role">Diretor Comercial</p>
+          <p className="member-crea"></p>
+          <p className="member-description">
+            Responsável pelo desenvolvimento comercial e relacionamento
+            estratégico com clientes e parceiros da Montevi Engenharia.
+          </p>
+        </div>
       </div>
     </section>
   );
