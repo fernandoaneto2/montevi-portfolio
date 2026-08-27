@@ -36,7 +36,7 @@ export default function About() {
             <p>Projetos de Conexão</p>
           </div>
           <div className="stat">
-            <h3>+15 Anos</h3>
+            <h3>+6 Anos</h3>
             <p>No Mercado</p>
           </div>
         </div>
