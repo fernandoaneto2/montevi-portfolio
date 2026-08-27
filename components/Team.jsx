@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import fotoChicao from "../Images/icone-chicao.jpeg";
 
 export default function Team() {
   useEffect(() => {
@@ -88,6 +89,28 @@ export default function Team() {
           </p>
         </div>
 
+        <div className="team-member">
+          <div
+            className="member-avatar"
+            aria-hidden="true"
+            style={{ position: "relative" }}
+          >
+            <Image
+              src={fotoChicao}
+              alt="Foto Perfil"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              sizes="120px"
+            />
+          </div>
+          <h3>Francisco Alves de Souza Neto</h3>
+          <p className="member-role">Diretor Comercial</p>
+          <p className="member-crea"></p>
+          <p className="member-description">
+            Responsável pelo desenvolvimento comercial e relacionamento
+            estratégico com clientes e parceiros da Montevi Engenharia.
+          </p>
+        </div>
       </div>
     </section>
   );
