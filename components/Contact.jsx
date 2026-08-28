@@ -77,7 +77,6 @@ export default function Contact() {
             <p><a href="tel:+5583986280101">(83) 98628-0101</a></p>
             <p><strong>Suporte técnico</strong></p>
             <p><a href="tel:+5511922763114">(11) 92276-3114</a></p>
-            <p><a href="tel:+5583998177249">(83) 99817-7249</a></p>
           </div>
           <div className="contact-item">
             <h3>E-mail</h3>
