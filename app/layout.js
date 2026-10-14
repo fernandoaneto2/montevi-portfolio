@@ -101,6 +101,12 @@ const schemaOrg = {
     longitude: -34.845,
   },
   foundingDate: "2024-03",
+  founder: {
+    "@type": "Person",
+    name: "Vitanael Alves de Aquino",
+    jobTitle: "Sócio-Fundador e Engenheiro Eletricista",
+    worksFor: { "@id": SITE_URL },
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

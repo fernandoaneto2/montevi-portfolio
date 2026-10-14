@@ -49,6 +49,30 @@ export default function Team() {
             style={{ position: "relative" }}
           >
             <Image
+              src="/Images/foto-alves.png"
+              alt="Foto Perfil"
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="120px"
+            />
+          </div>
+          <h3>Vitanael Alves de Aquino</h3>
+          <p className="member-role">Sócio-Fundador · Engenheiro Eletricista</p>
+          <p className="member-crea">CREA: 162020730-3 PB</p>
+          <p className="member-description">
+            Fundador da Montevi Engenharia. +10 anos no setor de
+            infraestrutura, +200 projetos elétricos e +25 MW em projetos de
+            conexão.
+          </p>
+        </div>
+
+        <div className="team-member">
+          <div
+            className="member-avatar"
+            aria-hidden="true"
+            style={{ position: "relative" }}
+          >
+            <Image
               src="/Images/foto-torreao.png"
               alt="Foto Perfil"
               fill
