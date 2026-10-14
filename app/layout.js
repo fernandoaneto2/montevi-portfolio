@@ -103,7 +103,7 @@ const schemaOrg = {
   foundingDate: "2024-03",
   founder: {
     "@type": "Person",
-    name: "Vitanael Alves de Aquino",
+    name: "Vitanael Alves de Aquino Neto",
     jobTitle: "Sócio-Fundador e Engenheiro Eletricista",
     worksFor: { "@id": SITE_URL },
   },

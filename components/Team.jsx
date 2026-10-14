@@ -56,7 +56,7 @@ export default function Team() {
               sizes="120px"
             />
           </div>
-          <h3>Vitanael Alves de Aquino</h3>
+          <h3>Vitanael Alves de Aquino Neto</h3>
           <p className="member-role">Sócio-Fundador · Engenheiro Eletricista</p>
           <p className="member-crea">CREA: 162020730-3 PB</p>
           <p className="member-description">
