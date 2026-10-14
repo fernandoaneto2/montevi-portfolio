@@ -81,12 +81,11 @@ export default function Team() {
             />
           </div>
           <h3>Vitor Torreão Alves De Souza</h3>
-          <p className="member-role">Comercial técnico</p>
+          <p className="member-role">Comercial</p>
           <p className="member-crea"></p>
           <p className="member-description">
-            +5 anos de experiência em Engenharia Elétrica, estudo técnico,
-            gestão de projetos e fiscalização/execução de obras públicas e
-            privadas.
+            Atua na área comercial, no atendimento e relacionamento com
+            clientes e parceiros da Montevi Engenharia.
           </p>
         </div>
 
