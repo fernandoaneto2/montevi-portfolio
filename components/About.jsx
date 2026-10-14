@@ -11,8 +11,9 @@ export default function About() {
       <div className="about-content">
         <h2 className="section-title">Somos a Monteví</h2>
         <p className="about-text">
-          Fundada em 2023, a Montevi nasce como a consolidação de mais de 15
-          anos de atuação de seus sócios e corpo técnico no setor elétrico.
+          Fundada em 2024 pelo engenheiro eletricista Vitanael Alves de Aquino
+          Neto, a Montevi nasce como a consolidação de mais de 15 anos de
+          atuação de seus sócios e corpo técnico no setor elétrico.
           Somos a sua parceira confiável em soluções de infraestrutura e geração
           de energia, unindo o vigor de uma estrutura moderna à experiência de
           quem domina o mercado há mais de uma década.

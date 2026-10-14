@@ -93,6 +93,7 @@ export default function Footer() {
           <address className="footer-address">
             <p>Montevi Engenharia LTDA</p>
             <p>CNPJ: 54.308.461/0001-55</p>
+            <p>Fundador: Vitanael Alves de Aquino Neto</p>
             <p>João Pessoa - PB</p>
             <p>Atuação: Todo Brasil</p>
           </address>
